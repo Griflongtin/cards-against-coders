@@ -1,0 +1,27 @@
+h1 {
+  font-family: 'Titan One', cursive;
+  color: #d74133;
+  font-size: 60px;
+}
+
+.jumbotron {
+  background-color: #a2cbc6;
+}
+
+.score {
+  font-weight: bold;
+  color: #d74133;
+}
+
+h3 {
+  font-family: 'Titan One', cursive;
+  font-size: 25px;
+}
+
+#score {
+  display: block;
+}
+
+.d-inline {
+  margin-right: 15px;
+}
