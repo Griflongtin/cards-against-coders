@@ -1,3 +1,11 @@
+/*#game {
+  display: none;
+}*/
+
+.hide {
+  display:none;
+}
+
 h1 {
   font-family: 'Titan One', cursive;
   color: #d74133;

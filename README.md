@@ -44,7 +44,7 @@ _The application's randomizer function will then remove each card drawn by rando
 * _Example Output: Those dealt cards are removed from deck of white cards._
 
 _The application will allow player to select a card from their hand each round via a checkbox._
-* _Example Input: Player clicks checkbox from hand of 5 cards._
+* _Example Input: Player clicks checkbox from hand of 6 cards._
 * _Example Output: Player's chosen card is selected for round play._
 
 _The application, after all three players have selected white cards for that round, game will display black card and other 3 players' selected cards._

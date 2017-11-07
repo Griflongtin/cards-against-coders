@@ -111,29 +111,49 @@ var whiteCard = {
 
 
 
-function viewManager() {
-//
-    $("div#black-card-draw").hide();
-    $("div#player-hand-view").hide();
-    $("div#winner-pick-view").hide();
-  }
+// function viewManager() {
+//   // $("div#start-view").hide();
+//   $("div#black-card-draw").hide();
+//   $("div#player-hand-view").hide();
+//   $("div#winner-pick-view").hide();
+//   }
 
 //start front end
+
 $(document).ready(function() {
-  viewManager();
+  $("form#player-name").submit(function(event) {
+    event.preventDefault();
+    var playerOneName = $("input#player1-name").val();
+    var playerTwoName = $("input#player2-name").val();
+    var playerThreeName = $("input#player3-name").val();
+    var playerFourName = $("input#player4-name").val();
+    // Things we need here on this button click:
+    //call function for white card draw
+    // draw black card for playesr
+    // hide start view, reveal black-card-draw and player-hand-view
+    $("#Player-one-name-display").text(playerOneName);
+    $("div#load").addClass('hide');
+  });
 
-  $("div#start-view form#player-name").submit(function(event) {
-  event.preventDefault();
-  var playerOneName = $("input#player1-name").val();
-  var playerTwoName = $("input#player2-name").val();
-  var playerThreeName = $("input#player3-name").val();
-  var playerFourName = $("input#player4-name").val();
+  $("form#player-hand").submit(function(event) {
+    event.preventDefault();
+    var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
+    alert("cool");
+    //Things we need here on this button click:
+    // Assign card to empty array for player
+    // Trigger function/Reset for next player selection (2x)
+    // on the last player's turn, hide view, and show winner-pick-view
 
-  //call function for white card draw
-  //draw black card for player
-  $("div#start-view").hide();
-  $("div#black-card-draw").show();
-  $("div#player-hand-view").show();
+  });
+
+  $("button#judge-your-card").submit(function(event) {
+    event.preventDefault();
+      var selectTheWinner = $("input[name='player-hand']:checked").val();
+
+      //Things we need here on this button click:
+      // Pick the winner and award the point
+      // Check each player's total against the goal
+      // If game continues to next round, draw new card and start new hand
   });
 
 });
