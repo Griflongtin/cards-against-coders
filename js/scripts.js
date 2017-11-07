@@ -108,3 +108,23 @@ var whiteCard = {
   seventyNine: new Card ("The Boy Scouts of America.", 79),
   eighty: new Card ("Being marginalzed.", 80)
 };
+
+
+
+function viewManager() {
+    $("div#start-view").hide();
+    $("div#black-card-draw").hide();
+    $("div#player-hand-view").hide();
+    $("div#winner-pick-view").hide();
+  }
+
+//start front end
+$(document).ready(function() {
+  $("div#start-view form#player-name").submit(function(event) {
+  event.preventDefault();
+  var playerOneName = $("input#player1-name").val();
+  var playerTwoName = $("input#player2-name").val();
+  var playerThreeName = $("input#player3-name").val();
+  var playerFourName = $("input#player4-name").val();
+  });
+});
