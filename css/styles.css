@@ -25,3 +25,12 @@ h3 {
 .d-inline {
   margin-right: 15px;
 }
+
+.black-card {
+  background-color: #1e2532;
+  color: #ffffff;
+}
+
+.card {
+  margin-top: 20px;
+}
