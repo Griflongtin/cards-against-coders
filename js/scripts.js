@@ -132,13 +132,17 @@ $(document).ready(function() {
     // draw black card for playesr
     // hide start view, reveal black-card-draw and player-hand-view
     $("#Player-one-name-display").text(playerOneName);
+    // $("#player1-score").append(playerOneName);
+    // $("#player2-score").append(playerTwoName);
+    // $("#player3-score").append(playerThreeName);
+    // $("#player4-score").append(playerFourName);
     $("div#load").addClass('hide');
   });
 
   $("form#player-hand").submit(function(event) {
     event.preventDefault();
     var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
-    alert("cool");
+    alert(playerSelectWhiteCard);
     //Things we need here on this button click:
     // Assign card to empty array for player
     // Trigger function/Reset for next player selection (2x)
@@ -146,7 +150,7 @@ $(document).ready(function() {
 
   });
 
-  $("button#judge-your-card").submit(function(event) {
+  $("form#winner-pick").submit(function(event) {
     event.preventDefault();
       var selectTheWinner = $("input[name='player-hand']:checked").val();
 
