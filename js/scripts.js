@@ -1,4 +1,4 @@
-function player(userName, playerNumber){
+function Player(userName, playerNumber){
   this.name = userName;
   this.playerNumber = playerNumber;
   this.points = 0;
@@ -117,63 +117,62 @@ var whiteEighty = new Card ("Being marginalzed.", 80);
 var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty];
 var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty];
 
-player.prototype.drawBlack = function(){
+Player.prototype.drawBlack = function(){
   var cardDraw = Math.floor(Math.random() * blackCards.length);
   return cardDraw
 }
 
-player.prototype.drawWhite = function(){
+Player.prototype.drawWhite = function(){
   var cardDraw = Math.floor(Math.random() * whiteCards.length);
   return cardDraw
 }
 
-player.prototype.drawBlackHand = function(playerNumber){
+Player.prototype.drawBlackHand = function(playerNumber){
   var cardNumber = this.drawBlack();
   playerNumber.blackCard.push(blackCards[cardNumber].info);
- blackCards.splice(cardNumber,1);
+  blackCards.splice(cardNumber,1);
 }
 
-player.prototype.drawHand = function(playerNumber){
+Player.prototype.drawHand = function(playerNumber){
   for (var i = playerNumber.hand.length; i <= 5; i++) {
     var cardNumber = this.drawWhite();
     playerNumber.hand.push(whiteCards[cardNumber].info);
-   whiteCards.splice(cardNumber,1);
+    whiteCards.splice(cardNumber,1);
   }
 }
-player.prototype.reset = function(playerNumber) {
+
+Player.prototype.reset = function(playerNumber) {
   playerNumber.blackCard = [];
 }
-player.prototype.pointsToggle = function(playerNumber) {
+
+Player.prototype.pointsToggle = function(playerNumber) {
   playerNumber.points += 1;
 }
-player.prototype.checkForWin = function(playerNumber) {
+
+Player.prototype.checkForWin = function(playerNumber) {
   if (playerNumber.points === 6) {
     return true
   }
 }
 
 
-var player1 = new player("cool", 1);
-var player2 = new player("uncool", 2);
-var player3 = new player("MaxCool", 3);
-var player4 = new player("2Cool", 4);
 
-console.log(player1);
-console.log(player2);
-console.log(player3);
-console.log(player4);
-
-player1.drawHand(player1);
-console.log(player1.hand);
-player2.drawHand(player2);
-console.log(player2.hand);
-player3.drawHand(player3);
-console.log(player3.hand);
-player4.drawHand(player4);
-console.log(player4.hand);
-
-console.log(whiteCards);
-console.log(whiteCards.length);
+// console.log(player1);
+// console.log(player2);
+// console.log(player3);
+// console.log(player4);
+//
+// player1.drawHand(player1);
+// console.log(player1.hand);
+// player2.drawHand(player2);
+// console.log(player2.hand);
+// player3.drawHand(player3);
+// console.log(player3.hand);
+// player4.drawHand(player4);
+// console.log(player4.hand);
+//
+// console.log(whiteCards);
+// console.log(whiteCards.length);
 
 // function viewManager() {
 //   // $("div#start-view").hide();
@@ -193,20 +192,30 @@ $(document).ready(function() {
     var playerFourName = $("input#player4-name").val();
     // Things we need here on this button click:
     //call function for white card draw
+    var player1 = new Player(playerOneName, 1);
+    var player2 = new Player(playerTwoName, 2);
+    var player3 = new Player(playerThreeName, 3);
+    var player4 = new Player(playerFourName, 4);
+
+    var sure = function(){
+      var players = {1,2,3,4};
+      players.forEach(function(playerNumber)) {
+        player+playerNumber.drawHand(player);
+      }
+    }
+    players.drawHand(player);
     // draw black card for playesr
+    player1.drawBlackHand(player1);
+
     // hide start view, reveal black-card-draw and player-hand-view
     $("#Player-one-name-display").text(playerOneName);
-    // $("#player1-score").append(playerOneName);
-    // $("#player2-score").append(playerTwoName);
-    // $("#player3-score").append(playerThreeName);
-    // $("#player4-score").append(playerFourName);
     $("div#load").addClass('hide');
+    $("#game").show();
   });
 
   $("form#player-hand").submit(function(event) {
     event.preventDefault();
     var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
-    alert(playerSelectWhiteCard);
     //Things we need here on this button click:
     // Assign card to empty array for player
     // Trigger function/Reset for next player selection (2x)

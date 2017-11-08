@@ -1,6 +1,6 @@
-/*#game {
+#game, #winner-pick {
   display: none;
-}*/
+}
 
 .hide {
   display:none;
