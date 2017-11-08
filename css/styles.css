@@ -1,6 +1,6 @@
-/*#game {
+#game, #winner-pick {
   display: none;
-}*/
+}
 
 .hide {
   display:none;
@@ -19,6 +19,7 @@ h1 {
 .score {
   font-weight: bold;
   color: #d74133;
+  font-size: 20px;
 }
 
 h3 {
@@ -28,10 +29,6 @@ h3 {
 
 #score {
   display: block;
-}
-
-.d-inline {
-  margin-right: 15px;
 }
 
 .black-card {
