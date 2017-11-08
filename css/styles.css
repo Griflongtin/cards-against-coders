@@ -1,4 +1,4 @@
-#game, #winner-pick-view, #black-card-draw, #player-hand-view, #round-start-view, .hide {
+#game, #winner-pick-view, #black-card-draw, #player-hand-view, #round-start-view, .hide, .hooray, #SNL {
   display: none;
 }
 

@@ -257,6 +257,7 @@ CardPlayedPlayer.prototype.addCard = function(player, card) {
 $(document).ready(function() {
   $("form#player-name").submit(function(event) {
     event.preventDefault();
+
     var playerOneName = $("input#player1-name").val();
     var playerTwoName = $("input#player2-name").val();
     var playerThreeName = $("input#player3-name").val();
@@ -276,6 +277,10 @@ $(document).ready(function() {
       player3.drawHand(player3);
       player4.drawHand(player4);
     }
+    $("#jugadoro-uno-nombre").text(player1.name);
+    $("#jugadoro-dos-nombre").text(player2.name);
+    $("#jugadoro-tres-nombre").text(player3.name);
+    $("#jugadoro-cuatro-nombre").text(player4.name);
     // hide start view, reveal black-card-draw and player-hand-view
     $("div#load").hide();
     $("#game").show();
@@ -370,6 +375,7 @@ $(document).ready(function() {
     $("form#player-hand").submit(function(event) {
       $("#Player-one-name-display").text(playerOneName);
       event.preventDefault();
+
       var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
       //Things we need here on this button click:
       // Assign card to empty array for player
@@ -380,12 +386,44 @@ $(document).ready(function() {
 
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
-        var selectTheWinner = $("input[name='player-hand']:checked").val();
+
+      var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
+        if (selectTheWinner === "1") {
+          player1.points += 1;
+          $("span#player1-score").text(player1.points);
+        } else if (selectTheWinner === "2") {
+          player2.points += 1;
+          $("span#player2-score").text(player2.points);
+        } else if (selectTheWinner === "3") {
+          player3.points += 1;
+          $("span#player3-score").text(player3.points);
+        } else if (selectTheWinner === "4") {
+          player4.points += 1;
+          $("span#player4-score").text(player4.points);
+        }
+
+
+//     var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
+//     if (selectTheWinner === this.playerNumber)
+//     debugger;{
+//       Player(selectTheWinner).pointsToggle();
+//       console.log(Player(SelectTheWinner).points);
+//
+// }
 
         //Things we need here on this button click:
-        // Pick the winner and award the point
+
+
+
+      // Pick the winner and award the point
         // Check each player's total against the goal
         // If game continues to next round, draw new card and start new hand
+
     });
+    // Winner Page here:
+    // $("#game").hide();
+    // $(".hooray").show();
+
+
   });
 });
