@@ -5,6 +5,14 @@ function Player(userName, playerNumber){
   this.hand = [];
   this.blackCard = [];
   this.turn = false;
+  this.turnPlay = true;
+}
+
+function CardPlayedPlayer(){
+  this.player1 = [];
+  this.player2 = [];
+  this.player3 = [];
+  this.player4 = [];
 }
 
 function Card(info) {
@@ -252,11 +260,13 @@ $(document).ready(function() {
     var playerFourName = $("input#player4-name").val();
     // Things we need here on this button click:
     //call function for white card draw
+    var playedWhiteCard = new CardPlayedPlayer();
     var player1 = new Player(playerOneName, 1);
     var player2 = new Player(playerTwoName, 2);
     var player3 = new Player(playerThreeName, 3);
     var player4 = new Player(playerFourName, 4);
     player1.turn = true;
+    player1.turnPlay = false;
     var drawAction = function(){
       player1.drawHand(player1);
       player2.drawHand(player2);
@@ -288,36 +298,51 @@ $(document).ready(function() {
       $("div#round-start-view").show();
     });
 
-    var cool = function(player){
-      debugger
+
+
+    var runTurn = function(player){
+
       $("#Player-name-display").text(player.name);
+      $("span#white-card-content-one").text(player.hand[0]);
+      $("span#white-card-content-two").text(player.hand[1]);
+      $("span#white-card-content-three").text(player.hand[2]);
+      $("span#white-card-content-four").text(player.hand[3]);
+      $("span#white-card-content-five").text(player.hand[4]);
+      $("span#white-card-content-six").text(player.hand[5]);
       $("form#player-hand").submit(function(event) {
         event.preventDefault();
-        var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
+        var whiteCardPlayed = $("input[name='player-hand']:checked").val();
+        playedWhiteCard.player = whiteCardPlayed;
         //Things we need here on this button click:
         // Assign card to empty array for player
         // Trigger function/Reset for next player selection (2x)
         // on the last player's turn, hide view, and show winner-pick-view
+        $(this).trigger('reset');
+        player.turnPlay = false;
+        checkTurn();
       });
+    }
+    var checkTurn = function(){
+      if (player1.turnPlay === true) {
+        runTurn(player1);
+      } else if (player2.turnPlay === true){
+        runTurn(player2);
+      } else if (player3.turnPlay === true){
+        runTurn(player3);
+      } else if (player4.turnPlay === true){
+        runTurn(player4);
+      } else {
+        $("div#player-hand-view").hide();
+        $("div#winner-pick-view").show();
+      }
     }
 
     $("button#round-start").click(function() {
       $("div#round-start-view").hide();
       $("div#player-hand-view").show();
-      if (player1.turn === false) {
-        cool(player1);
-      }
-      if (player2.turn === false) {
-        cool(player2);
-      }
-      if (player3.turn === false) {
-        cool(player3);
-      }
-      if (player4.turn === false) {
-        cool(player4);
-      }
+      checkTurn();
     });
-    $("div#player-hand-view").hide();
+
 
 
     $("form#player-hand").submit(function(event) {
