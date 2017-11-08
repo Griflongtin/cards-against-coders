@@ -1,9 +1,5 @@
-#game, #winner-pick {
+#game, #winner-pick, #black-card-draw, #player-hand-view, #round-start-view {
   display: none;
-}
-
-.hide {
-  display:none;
 }
 
 h1 {

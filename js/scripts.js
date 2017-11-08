@@ -4,6 +4,7 @@ function Player(userName, playerNumber){
   this.points = 0;
   this.hand = [];
   this.blackCard = [];
+  this.turn = false;
 }
 
 function Card(info) {
@@ -172,7 +173,7 @@ var whiteOneHundredThirtySeven = new Card ("Lance Armstrong's missing testicle")
 var whiteOneHundredThirtyEight = new Card ("The Pope.");
 // end of white cards
 var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty];
-var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEigth, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight];
+var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight];
 
 Player.prototype.drawBlack = function(){
   var cardDraw = Math.floor(Math.random() * blackCards.length);
@@ -212,13 +213,6 @@ Player.prototype.checkForWin = function(playerNumber) {
   }
 }
 
-
-
-// console.log(player1);
-// console.log(player2);
-// console.log(player3);
-// console.log(player4);
-//
 // player1.drawHand(player1);
 // console.log(player1.hand);
 // player2.drawHand(player2);
@@ -227,6 +221,15 @@ Player.prototype.checkForWin = function(playerNumber) {
 // console.log(player3.hand);
 // player4.drawHand(player4);
 // console.log(player4.hand);
+// draw black card for playesr
+
+
+// console.log(player1);
+// console.log(player2);
+// console.log(player3);
+// console.log(player4);
+//
+
 //
 // console.log(whiteCards);
 // console.log(whiteCards.length);
@@ -253,41 +256,89 @@ $(document).ready(function() {
     var player2 = new Player(playerTwoName, 2);
     var player3 = new Player(playerThreeName, 3);
     var player4 = new Player(playerFourName, 4);
-
-    var sure = function(){
-      var players = {1,2,3,4};
-      players.forEach(function(playerNumber)) {
-        player+playerNumber.drawHand(player);
-      }
+    player1.turn = true;
+    var drawAction = function(){
+      player1.drawHand(player1);
+      player2.drawHand(player2);
+      player3.drawHand(player3);
+      player4.drawHand(player4);
     }
-    players.drawHand(player);
-    // draw black card for playesr
-    player1.drawBlackHand(player1);
-
     // hide start view, reveal black-card-draw and player-hand-view
-    $("#Player-one-name-display").text(playerOneName);
-    $("div#load").addClass('hide');
+    $("div#load").hide();
     $("#game").show();
-  });
 
-  $("form#player-hand").submit(function(event) {
-    event.preventDefault();
-    var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
-    //Things we need here on this button click:
-    // Assign card to empty array for player
-    // Trigger function/Reset for next player selection (2x)
-    // on the last player's turn, hide view, and show winner-pick-view
 
-  });
+    $("button#button-black-card-draw").click(function() {
+      drawAction();
+      if (player1.turn === true) {
+        player1.drawBlackHand(player1);
+        $("span#black-card-content").text(player1.blackCard);
+      } else if ( player2.turn === true) {
+        player2.drawBlackHand(player2);
+        $("span#black-card-content").text(player2.blackCard);
+      } else if ( player3.turn === true) {
+        player3.drawBlackHand(player3);
+        $("span#black-card-content").text(player3.blackCard);
+      }else if( player4.turn === true) {
+        player4.drawBlackHand(player4);
+        $("span#black-card-content").text(player4.blackCard);
+      }
+      $("div#play-turn").hide();
+      $("div#black-card-draw").show();
+      $("div#round-start-view").show();
+    });
 
-  $("form#winner-pick").submit(function(event) {
-    event.preventDefault();
-      var selectTheWinner = $("input[name='player-hand']:checked").val();
+    var cool = function(player){
+      debugger
+      $("#Player-name-display").text(player.name);
+      $("form#player-hand").submit(function(event) {
+        event.preventDefault();
+        var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
+        //Things we need here on this button click:
+        // Assign card to empty array for player
+        // Trigger function/Reset for next player selection (2x)
+        // on the last player's turn, hide view, and show winner-pick-view
+      });
+    }
 
+    $("button#round-start").click(function() {
+      $("div#round-start-view").hide();
+      $("div#player-hand-view").show();
+      if (player1.turn === false) {
+        cool(player1);
+      }
+      if (player2.turn === false) {
+        cool(player2);
+      }
+      if (player3.turn === false) {
+        cool(player3);
+      }
+      if (player4.turn === false) {
+        cool(player4);
+      }
+    });
+    $("div#player-hand-view").hide();
+
+
+    $("form#player-hand").submit(function(event) {
+      $("#Player-one-name-display").text(playerOneName);
+      event.preventDefault();
+      var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
       //Things we need here on this button click:
-      // Pick the winner and award the point
-      // Check each player's total against the goal
-      // If game continues to next round, draw new card and start new hand
-  });
+      // Assign card to empty array for player
+      // Trigger function/Reset for next player selection (2x)
+      // on the last player's turn, hide view, and show winner-pick-view
 
+    });
+
+    $("form#winner-pick").submit(function(event) {
+      event.preventDefault();
+        var selectTheWinner = $("input[name='player-hand']:checked").val();
+
+        //Things we need here on this button click:
+        // Pick the winner and award the point
+        // Check each player's total against the goal
+        // If game continues to next round, draw new card and start new hand
+    });
+  });
 });

@@ -46,6 +46,8 @@
       </div><!--close start-->
     </div>
 
+
+
     <div class="container" id="game">
     <div id="score">
       <h3>Scoreboard</h3>
@@ -55,21 +57,28 @@
         <li class="score">Score for: <span id="player3-score"></span></li>
         <li class="score">Score for: <span id="player4-score"></span></li>
       </ul>
-
       </div><!--close score ID-->
+
+      <div id="play-turn">
+        <button class="btn btn-outline-info btn-block btn-lg" type="button" id="button-black-card-draw">Play Turn</button>
+      </div>
 
     <div id="black-card-draw">
       <div class="card black-card w-50">
         <div class="card-body">
           <h5 class="card-title">Cards Against Coders</h5>
-          <p class="card-text"><span class="black-card-content">Some text goes here</span></p>
+          <p class="card-text"><span id="black-card-content">Some text goes here</span></p>
         </div>
       </div>
     </div><!--close black card draw-->
 
+    <div id="round-start-view">
+      <button id="round-start" class="btn btn-outline-info btn-block btn-lg" type="button">Pick card Player Round</button>
+    </div>
+
     <div id="player-hand-view">
       <form id="player-hand">
-        <h3 id="Player-one-name-display"></h3>
+        <h3 id="Player-name-display"></h3>
           <div class="row">
 
           <div class="card-deck">
