@@ -5,6 +5,7 @@ function Player(userName, playerNumber){
   this.hand = [];
   this.blackCard = [];
   this.turn = false;
+  this.turnPlay = true;
 }
 
 function Card(info) {
@@ -257,6 +258,7 @@ $(document).ready(function() {
     var player3 = new Player(playerThreeName, 3);
     var player4 = new Player(playerFourName, 4);
     player1.turn = true;
+    player1.turnPlay = false;
     var drawAction = function(){
       player1.drawHand(player1);
       player2.drawHand(player2);
@@ -288,8 +290,10 @@ $(document).ready(function() {
       $("div#round-start-view").show();
     });
 
-    var cool = function(player){
-      debugger
+
+
+    var cool2 = function(player){
+
       $("#Player-name-display").text(player.name);
       $("form#player-hand").submit(function(event) {
         event.preventDefault();
@@ -298,26 +302,31 @@ $(document).ready(function() {
         // Assign card to empty array for player
         // Trigger function/Reset for next player selection (2x)
         // on the last player's turn, hide view, and show winner-pick-view
+        $(this).trigger('reset');
+        player.turnPlay = false;
+        cool();
       });
+    }
+    var cool = function(){
+      if (player1.turnPlay === true) {
+        cool2(player1);
+      } else if (player2.turnPlay === true){
+        cool2(player2);
+      } else if (player3.turnPlay === true){
+        cool2(player3);
+      } else if (player4.turnPlay === true){
+        cool2(player4);
+      } else {
+        alert("What now!")
+      }
     }
 
     $("button#round-start").click(function() {
       $("div#round-start-view").hide();
       $("div#player-hand-view").show();
-      if (player1.turn === false) {
-        cool(player1);
-      }
-      if (player2.turn === false) {
-        cool(player2);
-      }
-      if (player3.turn === false) {
-        cool(player3);
-      }
-      if (player4.turn === false) {
-        cool(player4);
-      }
+      cool();
     });
-    $("div#player-hand-view").hide();
+
 
 
     $("form#player-hand").submit(function(event) {
