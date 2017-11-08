@@ -8,6 +8,13 @@ function Player(userName, playerNumber){
   this.turnPlay = true;
 }
 
+function CardPlayedPlayer(){
+  this.player1 = [];
+  this.player2 = [];
+  this.player3 = [];
+  this.player4 = [];
+}
+
 function Card(info) {
   this.info = info;
   this.active = true;
@@ -253,6 +260,7 @@ $(document).ready(function() {
     var playerFourName = $("input#player4-name").val();
     // Things we need here on this button click:
     //call function for white card draw
+    var playedWhiteCard = new CardPlayedPlayer();
     var player1 = new Player(playerOneName, 1);
     var player2 = new Player(playerTwoName, 2);
     var player3 = new Player(playerThreeName, 3);
@@ -292,39 +300,47 @@ $(document).ready(function() {
 
 
 
-    var cool2 = function(player){
+    var runTurn = function(player){
 
       $("#Player-name-display").text(player.name);
+      $("span#white-card-content-one").text(player.hand[0]);
+      $("span#white-card-content-two").text(player.hand[1]);
+      $("span#white-card-content-three").text(player.hand[2]);
+      $("span#white-card-content-four").text(player.hand[3]);
+      $("span#white-card-content-five").text(player.hand[4]);
+      $("span#white-card-content-six").text(player.hand[5]);
       $("form#player-hand").submit(function(event) {
         event.preventDefault();
-        var playerSelectWhiteCard = $("input[name='player-hand']:checked").val();
+        var whiteCardPlayed = $("input[name='player-hand']:checked").val();
+        playedWhiteCard.player = whiteCardPlayed;
         //Things we need here on this button click:
         // Assign card to empty array for player
         // Trigger function/Reset for next player selection (2x)
         // on the last player's turn, hide view, and show winner-pick-view
         $(this).trigger('reset');
         player.turnPlay = false;
-        cool();
+        checkTurn();
       });
     }
-    var cool = function(){
+    var checkTurn = function(){
       if (player1.turnPlay === true) {
-        cool2(player1);
+        runTurn(player1);
       } else if (player2.turnPlay === true){
-        cool2(player2);
+        runTurn(player2);
       } else if (player3.turnPlay === true){
-        cool2(player3);
+        runTurn(player3);
       } else if (player4.turnPlay === true){
-        cool2(player4);
+        runTurn(player4);
       } else {
-        alert("What now!")
+        $("div#player-hand-view").hide();
+        $("div#winner-pick-view").show();
       }
     }
 
     $("button#round-start").click(function() {
       $("div#round-start-view").hide();
       $("div#player-hand-view").show();
-      cool();
+      checkTurn();
     });
 
 

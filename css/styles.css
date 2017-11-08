@@ -1,4 +1,4 @@
-#game, #winner-pick, #black-card-draw, #player-hand-view, #round-start-view {
+#game, #winner-pick-view, #black-card-draw, #player-hand-view, #round-start-view {
   display: none;
 }
 
