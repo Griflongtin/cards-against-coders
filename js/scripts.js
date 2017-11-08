@@ -220,6 +220,9 @@ Player.prototype.checkForWin = function(playerNumber) {
     return true
   }
 }
+CardPlayedPlayer.prototype.addCard = function(player, card) {
+  this.player = card;
+}
 
 // player1.drawHand(player1);
 // console.log(player1.hand);
@@ -312,7 +315,7 @@ $(document).ready(function() {
       $("form#player-hand").submit(function(event) {
         event.preventDefault();
         var whiteCardPlayed = $("input[name='player-hand']:checked").val();
-        playedWhiteCard.player = whiteCardPlayed;
+        playedWhiteCard.addCard(player, whiteCardPlayed);
         //Things we need here on this button click:
         // Assign card to empty array for player
         // Trigger function/Reset for next player selection (2x)
@@ -333,7 +336,26 @@ $(document).ready(function() {
         runTurn(player4);
       } else {
         $("div#player-hand-view").hide();
-        $("div#winner-pick-view").show();
+        cool();
+      }
+    }
+    var cool = function(){
+      $("div#winner-pick-view").show();
+      if (player1.turn === false){
+        $("div#card-one").show();
+        $("span#played-white-card-one").text("player1");
+      }
+      if (player2.turn === false) {
+        $("div#card-two").show();
+        $("span#played-white-card-two").text("player2");
+      }
+      if (player3.turn === false) {
+        $("div#card-three").show();
+        $("span#played-white-card-three").text("player3");
+      }
+      if (player4.turn === false) {
+        $("div#card-four").show();
+        $("span#played-white-card-four").text("player4");
       }
     }
 
