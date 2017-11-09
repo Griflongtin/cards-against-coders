@@ -80,3 +80,7 @@ h3 {
 .card {
   border-radius: 10px;
 }
+
+.body-text {
+  font-size: 20px;
+}
