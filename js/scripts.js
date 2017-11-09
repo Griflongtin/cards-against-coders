@@ -34,6 +34,19 @@ var blackSeventeen = new Card ("What will I bring back in time to convince peopl
 var blackEighteen = new Card ("But before I kill you Mr. Bond. I must show you __________.");
 var blackNineteen = new Card ("While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on __________.");
 var blackTwenty = new Card ("Daddy? why is mommy crying?");
+//Start of Expansion Pack of Black Cards:
+var blackTwentyOne = new Card ("Undefined is null or not ______.");
+var blackTwentyTwo = new Card ("________ error has occurred. Do you wish to continue?");
+var blackTwentyThree = new Card ("programmer: An organism that turns _______ into software.");
+var blackTwentyFour = new Card ("________ invented the Internet.");
+var blackTwentyFive = new Card ("1 in 5 coders will experiment with ____________.");
+var blackTwentySix = new Card (" ___________ is out of date.");
+var blackTwentySeven = new Card ("________ are here because you broke something.");
+var blackTwentyEight = new Card ("Why did the programmer quit his/her job?");
+var blackTwentyNine = new Card ("______ write code that optimizes itself.");
+var blackThirty = new Card ("Bill Gates, Mark Zuckerberg and _________ walk into a bar.");
+var blackThirtyOne = new Card ("There's an app for ___________.");
+var blackThirtyTwo = new Card ("And the Webby goes to _________.");
 // end of black cards - Start of white Cards
 var whiteOne = new Card("Daddy issues.");
 var whiteTwo = new Card("King Kong.");
@@ -173,9 +186,24 @@ var whiteOneHundredThirtyFive = new Card ("The Amish.");
 var whiteOneHundredThirtySix = new Card ("Truthy. Falsey.");
 var whiteOneHundredThirtySeven = new Card ("[Object Object]");
 var whiteOneHundredThirtyEight = new Card ("The Pope.");
+//Expansion Pack for White Cards:
+var whiteOneHundredThirtyNine = new Card ("That doesn't look right");
+var whiteOneHundredForty = new Card ("Computer Science");
+var whiteOneHundredFortyOne = new Card ("Internet Explorer");
+var whiteOneHundredFortyTwo = new Card ("Google it.");
+var whiteOneHundredFortyThree = new Card ("Agile");
+var whiteOneHundredFortyFour = new Card ("Foo bar");
+var whiteOneHundredFortyFive = new Card ("Hello World!");
+var whiteOneHundredFortySix = new Card ("Y2K");
+var whiteOneHundredFortySeven = new Card ("Homestar runner.");
+var whiteOneHundredFortyEight = new Card ("Nyan cat.");
+var whiteOneHundredFortyNine = new Card ("Whiteboarding");
+var whiteOneHundredFifty = new Card ("Siri");
+var whiteOneHundredFiftyOne = new Card ("The Millennium Falcon");
+
 // end of white cards
-var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty];
-var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight];
+var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty, blackTwentyOne, blackTwentyTwo, blackTwentyThree, blackTwentyFour, blackTwentyFive, blackTwentySix, blackTwentySeven, blackTwentyEight, blackTwentyNine, blackThirty, blackThirtyOne, blackThirtyTwo];
+var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight, whiteOneHundredThirtyNine, whiteOneHundredForty, whiteOneHundredFortyOne, whiteOneHundredFortyTwo, whiteOneHundredFortyThree, whiteOneHundredFortyFour, whiteOneHundredFortyFive, whiteOneHundredFortySix, whiteOneHundredFortySeven, whiteOneHundredFortyEight, whiteOneHundredFortyNine, whiteOneHundredFifty, whiteOneHundredFiftyOne];
 
 Player.prototype.drawBlack = function(){
   var cardDraw = Math.floor(Math.random() * blackCards.length);
