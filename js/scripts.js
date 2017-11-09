@@ -287,11 +287,6 @@ $(document).ready(function() {
 
     $("button#round-start").click(function() {
       $("div#round-start-view").hide();
-      $("div#player-hand-view").show();
-      $("div#player1-hand").hide();
-      $("div#player2-hand").hide();
-      $("div#player3-hand").hide();
-      $("div#player4-hand").hide();
       checkTurn();
     });
 
@@ -316,46 +311,147 @@ $(document).ready(function() {
       player4.drawHand(player4);
     }
 
-    var runTurn = function(player){
-      $("#player1-name-display").text(player.name);
-      $("span#player1-card-content-one").text(player.hand[0]);
-      $("span#player1-card-content-two").text(player.hand[1]);
-      $("span#player1-card-content-three").text(player.hand[2]);
-      $("span#player1-card-content-four").text(player.hand[3]);
-      $("span#player1-card-content-five").text(player.hand[4]);
-      $("span#player1-card-content-six").text(player.hand[5]);
+    var runPlayer1Turn = function(){
+      $("#player1-name-display").text(player1.name);
+      $("span#player1-card-content-one").text(player1.hand[0]);
+      $("input#player1-one-card").val(player1.hand[0]);
+      $("span#player1-card-content-two").text(player1.hand[1]);
+      $("input#player1-two-card").val(player1.hand[0]);
+      $("span#player1-card-content-three").text(player1.hand[2]);
+      $("input#player1-three-card").val(player1.hand[0]);
+      $("span#player1-card-content-four").text(player1.hand[3]);
+      $("input#player1-four-card").val(player1.hand[0]);
+      $("span#player1-card-content-five").text(player1.hand[4]);
+      $("input#player1-five-card").val(player1.hand[0]);
+      $("span#player1-card-content-six").text(player1.hand[5]);
+      $("input#player1-six-card").val(player1.hand[0]);
       $("form#player1-hand").submit(function(event) {
         event.preventDefault();
-        var whiteCardPlayed = $("input[name='" + player + "-hand']:checked").val();
+        var whiteCardPlayed = $("input[name='player1-hand']:checked").val();
         console.log(whiteCardPlayed);
-        player.hold.push(whiteCardPlayed);
+        player1.hold.push(whiteCardPlayed);
         //Things we need here on this button click:
         // Assign card to empty array for player
         // Trigger function/Reset for next player selection (2x)
         // on the last player's turn, hide view, and show winner-pick-view
-        player.turnPlay = false;
-        console.log(player);
-        console.log(player.turnPlay);
+        player1.turnPlay = false;
+        console.log(player1);
+        console.log(player1.turnPlay);
         $(this).trigger('reset');
+        $("form#player1-hand").hide();
+        checkTurn();
+      });
+    }
+
+    var runPlayer2Turn = function(){
+      $("#player2-name-display").text(player2.name);
+      $("span#player2-card-content-one").text(player2.hand[0]);
+      $("input#player2-one-card").val(player2.hand[0]);
+      $("span#player2-card-content-two").text(player2.hand[1]);
+      $("input#player2-two-card").val(player2.hand[1]);
+      $("span#player2-card-content-three").text(player2.hand[2]);
+      $("input#player2-three-card").val(player2.hand[2]);
+      $("span#player2-card-content-four").text(player2.hand[3]);
+      $("input#player2-four-card").val(player2.hand[3]);
+      $("span#player2-card-content-five").text(player2.hand[4]);
+      $("input#player2-five-card").val(player2.hand[4]);
+      $("span#player2-card-content-six").text(player2.hand[5]);
+      $("input#player2-six-card").val(player2.hand[5]);
+      $("form#player2-hand").submit(function(event) {
+        event.preventDefault();
+        var whiteCardPlayed = $("input[name='player2-hand']:checked").val();
+        console.log(whiteCardPlayed);
+        player2.hold.push(whiteCardPlayed);
+        //Things we need here on this button click:
+        // Assign card to empty array for player
+        // Trigger function/Reset for next player selection (2x)
+        // on the last player's turn, hide view, and show winner-pick-view
+        player2.turnPlay = false;
+        console.log(player2);
+        console.log(player2.turnPlay);
+        $(this).trigger('reset');
+        $("form#player2-hand").hide();
+        checkTurn();
+      });
+    }
+
+    var runPlayer3Turn = function(){
+      $("#player3-name-display").text(player3.name);
+      $("span#player3-card-content-one").text(player3.hand[0]);
+      $("input#player3-one-card").val(player3.hand[0]);
+      $("span#player3-card-content-two").text(player3.hand[1]);
+      $("input#player3-two-card").val(player3.hand[1]);
+      $("span#player3-card-content-three").text(player3.hand[2]);
+      $("input#player3-three-card").val(player3.hand[2]);
+      $("span#player3-card-content-four").text(player3.hand[3]);
+      $("input#player3-four-card").val(player3.hand[3]);
+      $("span#player3-card-content-five").text(player3.hand[4]);
+      $("input#player3-five-card").val(player3.hand[4]);
+      $("span#player3-card-content-six").text(player3.hand[5]);
+      $("input#player3-six-card").val(player3.hand[5]);
+      $("form#player3-hand").submit(function(event) {
+        event.preventDefault();
+        var whiteCardPlayed = $("input[name='player3-hand']:checked").val();
+        console.log(whiteCardPlayed);
+        player3.hold.push(whiteCardPlayed);
+        //Things we need here on this button click:
+        // Assign card to empty array for player
+        // Trigger function/Reset for next player selection (2x)
+        // on the last player's turn, hide view, and show winner-pick-view
+        player3.turnPlay = false;
+        console.log(player3);
+        console.log(player3.turnPlay);
+        $(this).trigger('reset');
+        $("form#player3-hand").hide();
+        checkTurn();
+      });
+    }
+    var runPlayer4Turn = function(){
+      $("#player4-name-display").text(player4.name);
+      $("span#player4-card-content-one").text(player4.hand[0]);
+      $("input#player4-one-card").val(player4.hand[0]);
+      $("span#player4-card-content-two").text(player4.hand[1]);
+      $("input#player4-two-card").val(player4.hand[1]);
+      $("span#player4-card-content-three").text(player4.hand[2]);
+      $("input#player4-three-card").val(player4.hand[2]);
+      $("span#player4-card-content-four").text(player4.hand[3]);
+      $("input#player4-four-card").val(player4.hand[3]);
+      $("span#player4-card-content-five").text(player4.hand[4]);
+      $("input#player4-five-card").val(player4.hand[4]);
+      $("span#player4-card-content-six").text(player4.hand[5]);
+      $("input#player4-six-card").val(player4.hand[5]);
+      $("form#player4-hand").submit(function(event) {
+        event.preventDefault();
+        var whiteCardPlayed = $("input[name='player4-hand']:checked").val();
+        console.log(whiteCardPlayed);
+        player4.hold.push(whiteCardPlayed);
+        //Things we need here on this button click:
+        // Assign card to empty array for player
+        // Trigger function/Reset for next player selection (2x)
+        // on the last player's turn, hide view, and show winner-pick-view
+        player4.turnPlay = false;
+        console.log(player4);
+        console.log(player4.turnPlay);
+        $(this).trigger('reset');
+        $("form#player4-hand").hide();
         checkTurn();
       });
     }
 
     var checkTurn = function(){
       if (player1.turnPlay === true) {
-        $("div#player1-hand").show();
-        runPlayer1Turn(player1);
+        $("form#player1-hand").show();
+        runPlayer1Turn();
       } else if (player2.turnPlay === true){
-        $("div#player1-hand").show();
-        runPlayer2Turn(player2);
+        $("form#player2-hand").show();
+        runPlayer2Turn();
       } else if (player3.turnPlay === true){
-        $("div#player1-hand").show();
-        runPlayer3Turn(player3);
+        $("form#player3-hand").show();
+        runPlayer3Turn();
       } else if (player4.turnPlay === true){
-        $("div#player1-hand").show();
-        runPlayer4Turn(player4);
+        $("form#player4-hand").show();
+        runPlayer4Turn();
       } else {
-        $("div#player-hand-view").hide();
         ShowWhiteCardPlayed();
       }
     }
