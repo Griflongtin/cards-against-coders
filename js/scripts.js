@@ -260,6 +260,10 @@ $(document).ready(function() {
     var player4 = new Player(playerFourName, 4);
     player1.turn = true;
     player1.turnPlay = false;
+    $("#player-name-one").text(player1.name);
+    $("#player-name-two").text(player2.name);
+    $("#player-name-three").text(player3.name);
+    $("#player-name-four").text(player4.name);
     // hide start view, reveal black-card-draw and player-hand-view
     $("div#load").hide();
     $("#game").show();
@@ -292,13 +296,63 @@ $(document).ready(function() {
 
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
-        var selectTheWinner = $("input[name='player-hand']:checked").val();
 
-        //Things we need here on this button click:
-        // Pick the winner and award the point
-        // Check each player's total against the goal
-        // If game continues to next round, draw new card and start new hand
+      // Adds point to winner and scoreboard
+      var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
+        if (selectTheWinner === "1") {
+          player1.points += 1;
+          $("span#player1-score").text(player1.points);
+        } else if (selectTheWinner === "2") {
+          player2.points += 1;
+          $("span#player2-score").text(player2.points);
+        } else if (selectTheWinner === "3") {
+          player3.points += 1;
+          $("span#player3-score").text(player3.points);
+        } else if (selectTheWinner === "4") {
+          player4.points += 1;
+          $("span#player4-score").text(player4.points);
+        }
+      // Check each player's total against the goal and resets black card
+      player1.checkForWin(player1);
+      player2.checkForWin(player2);
+      player3.checkForWin(player3);
+      player4.checkForWin(player4);
+      player1.reset(player1);
+      player2.reset(player2);
+      player3.reset(player3);
+      player4.reset(player4);
+      // Draws new black card for next round:
+      var drawAction = function(){
+        player1.drawHand(player1);
+        player2.drawHand(player2);
+        player3.drawHand(player3);
+        player4.drawHand(player4);
+      }
+      // Draws new black card for next round.
+  //This will need to loop:
+      drawAction();
+      if (player1.turn === true) {
+        player1.drawBlackHand(player1);
+        $("span#black-card-content").text(player1.blackCard);
+      } else if ( player2.turn === true) {
+        player2.drawBlackHand(player2);
+        $("span#black-card-content").text(player2.blackCard);
+      } else if ( player3.turn === true) {
+        player3.drawBlackHand(player3);
+        $("span#black-card-content").text(player3.blackCard);
+      }else if( player4.turn === true) {
+        player4.drawBlackHand(player4);
+        $("span#black-card-content").text(player4.blackCard);
+      }
+
+      $("div#round-start-view").hide();
+      $("div#player-hand-view").show();
+      checkTurn();
+
     });
+    // Winner Page here:
+    // $("#game").hide();
+    // $(".hooray").show();
 
 
 
