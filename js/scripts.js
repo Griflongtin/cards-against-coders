@@ -4,9 +4,10 @@ function Player(userName, playerNumber){
   this.points = 0;
   this.hand = [];
   this.blackCard = [];
-  this.hold = [];
+  this.hold = [1];
   this.turn = false;
   this.turnPlay = true;
+  this.win = false;
 }
 
 function Card(info) {
@@ -47,14 +48,6 @@ var blackTwentyNine = new Card ("______ write code that optimizes itself.");
 var blackThirty = new Card ("Bill Gates, Mark Zuckerberg and _________ walk into a bar.");
 var blackThirtyOne = new Card ("There's an app for ___________.");
 var blackThirtyTwo = new Card ("And the Webby goes to _________.");
-var blackThirtyThree = new Card ("Your program isn't functioning because ___________.");
-var blackThirtyFour = new Card (" ___________ was found in your scripts.js file.");
-var blackThirtyFive = new Card (" ___________ corrupted your laptop hardrive.");
-var blackThirtySix = new Card (" ___________ has caused a merge conflict.");
-var blackThirtySeven = new Card ("Why did the programmer cross the road?");
-var blackThirtyEight = new Card ("Get in it. ____________ said.");
-var blackThirtyNine = new Card ("Conjunction junction. What's your ___________?");
-var blackForty = new Card ("Hi Diddle Diddle. ___________ and the JSFiddle");
 // end of black cards - Start of white Cards
 var whiteOne = new Card("Daddy issues.");
 var whiteTwo = new Card("King Kong.");
@@ -208,13 +201,7 @@ var whiteOneHundredFortyEight = new Card ("Nyan cat.");
 var whiteOneHundredFortyNine = new Card ("Whiteboarding");
 var whiteOneHundredFifty = new Card ("Siri");
 var whiteOneHundredFiftyOne = new Card ("The Millennium Falcon");
-var whiteOneHundredFiftyTwo = new Card ("Toddlers");
-var whiteOneHundredFiftyThree = new Card ("Ex-presidents.");
-var whiteOneHundredFiftyFour = new Card ("Downtown vagrants.");
-var whiteOneHundredFiftyFive = new Card ("Function");
-// end of white cards
-var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty, blackTwentyOne, blackTwentyTwo, blackTwentyThree, blackTwentyFour, blackTwentyFive, blackTwentySix, blackTwentySeven, blackTwentyEight, blackTwentyNine, blackThirty, blackThirtyOne, blackThirtyTwo, blackThirtyThree, blackThirtyFour, blackThirtyFive, blackThirtySix, blackThirtySeven, blackThirtyEight, blackThirtyNine, blackForty];
-var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight, whiteOneHundredThirtyNine, whiteOneHundredForty, whiteOneHundredFortyOne, whiteOneHundredFortyTwo, whiteOneHundredFortyThree, whiteOneHundredFortyFour, whiteOneHundredFortyFive, whiteOneHundredFortySix, whiteOneHundredFortySeven, whiteOneHundredFortyEight, whiteOneHundredFortyNine, whiteOneHundredFifty, whiteOneHundredFiftyOne, whiteOneHundredFiftyTwo, whiteOneHundredFiftyThree, whiteOneHundredFiftyFour, whiteOneHundredFiftyFive];
+
 // end of white cards
 var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty, blackTwentyOne, blackTwentyTwo, blackTwentyThree, blackTwentyFour, blackTwentyFive, blackTwentySix, blackTwentySeven, blackTwentyEight, blackTwentyNine, blackThirty, blackThirtyOne, blackThirtyTwo];
 var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight, whiteOneHundredThirtyNine, whiteOneHundredForty, whiteOneHundredFortyOne, whiteOneHundredFortyTwo, whiteOneHundredFortyThree, whiteOneHundredFortyFour, whiteOneHundredFortyFive, whiteOneHundredFortySix, whiteOneHundredFortySeven, whiteOneHundredFortyEight, whiteOneHundredFortyNine, whiteOneHundredFifty, whiteOneHundredFiftyOne];
@@ -255,8 +242,8 @@ Player.prototype.pointsToggle = function(playerNumber) {
 }
 
 Player.prototype.checkForWin = function(playerNumber) {
-  if (playerNumber.points === 6) {
-    return true
+  if (playerNumber.points === 3) {
+    playerNumber.win = true;
   }
 }
 
@@ -269,14 +256,15 @@ $(document).ready(function() {
     var playerTwoName = $("input#player2-name").val();
     var playerThreeName = $("input#player3-name").val();
     var playerFourName = $("input#player4-name").val();
-    // Things we need here on this button click:
-    //call function for white card draw
+
     var player1 = new Player(playerOneName, 1);
     var player2 = new Player(playerTwoName, 2);
     var player3 = new Player(playerThreeName, 3);
     var player4 = new Player(playerFourName, 4);
+
     player1.turn = true;
     player1.turnPlay = false;
+
     $("#player-name-one").text(player1.name);
     $("#player-name-two").text(player2.name);
     $("#player-name-three").text(player3.name);
@@ -285,10 +273,8 @@ $(document).ready(function() {
     $("span#player2-score").text(player2.points);
     $("span#player3-score").text(player3.points);
     $("span#player4-score").text(player4.points);
-    // hide start view, reveal black-card-draw and player-hand-view
     $("div#load").hide();
     $("#game").show();
-
 
     $("button#button-black-card-draw").click(function() {
       drawAction();
@@ -305,15 +291,20 @@ $(document).ready(function() {
 
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
-
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
       selectWinner(selectTheWinner);
       $(this).trigger('reset');
-      $("div#winner-pick-view").hide();
       endGame();
+      $("div#winner-pick-view").hide();
+      $("div#play-next-round-view").show();
+    });
+
+    $("button#play-next-round").click(function() {
       drawAction();
       drawBlackCard();
-      runPlayer1Turn();
+      $("div#play-next-round-view").hide();
+      $("div#black-card-draw").show();
+      $("div#round-start-view").show();
     });
 
     var selectWinner = function(selectTheWinner){
@@ -331,19 +322,23 @@ $(document).ready(function() {
         $("span#player4-score").text(player4.points);
       }
     }
+
     var endGame = function() {
-      if(player1.checkForWin(player1) === true){
-        alert(player1.name + " ,You won!");
+      var players = [player1, player2, player3, player4];
+      players.forEach(function(player) {
+        player.checkForWin(player);
+      });
+      if(player1.win === true || player2.win === true || player3.win === true || player4.win === true){
+        players.forEach(function (player){
+          if (player.win === true) {
+            $("#winner-name").text(player.name);
+            $(".hooray").show();
+          } else {
+            $("#losers").append(" " + player.name + ",");
+          }
+        });
       }
-      if(player2.checkForWin(player2) === true){
-        alert(player2.name + " ,You won!");
-      }
-      if(player3.checkForWin(player3) === true){
-        alert(player3.name + " ,You won!");
-      }
-      if(player4.checkForWin(player4) === true){
-        alert(player4.name + " ,You won!");
-      }
+
       if (player1.turn === true) {
         player1.reset(player1);
         player2.reset(player2);
@@ -374,12 +369,14 @@ $(document).ready(function() {
         player1.turnPlay = false;
       }
     }
+
     var drawAction = function(){
       player1.drawHand(player1);
       player2.drawHand(player2);
       player3.drawHand(player3);
       player4.drawHand(player4);
     }
+
     var runPlayer1Turn = function(){
       if (player1.turnPlay === true) {
         $("form#player1-hand").show();
@@ -399,7 +396,6 @@ $(document).ready(function() {
         $("form#player1-hand").submit(function(event) {
           event.preventDefault();
           var whiteCardPlayed = $("input[name='player1-hand']:checked").val();
-          console.log(player1.hand);
           if (player1.hand[0] === whiteCardPlayed) {
             player1.hand.splice(0,1);
           }
@@ -418,7 +414,6 @@ $(document).ready(function() {
           if (player1.hand[5] === whiteCardPlayed) {
             player1.hand.splice(5,1);
           }
-          console.log(player1.hand);
           player1.hold.push(whiteCardPlayed);
           player1.turnPlay = false;
           $(this).trigger('reset');
@@ -429,6 +424,7 @@ $(document).ready(function() {
         runPlayer2Turn();
       }
     }
+
     var runPlayer2Turn = function(){
       if (player2.turnPlay === true) {
         $("form#player2-hand").show();
@@ -448,7 +444,6 @@ $(document).ready(function() {
         $("form#player2-hand").submit(function(event) {
           event.preventDefault();
           var whiteCardPlayed = $("input[name='player2-hand']:checked").val();
-          console.log(player2.hand);
           if (player2.hand[0] === whiteCardPlayed) {
             player2.hand.splice(0,1);
           }
@@ -467,8 +462,6 @@ $(document).ready(function() {
           if (player2.hand[5] === whiteCardPlayed) {
             player2.hand.splice(5,1);
           }
-          player2.hand.splice(2,1);
-          console.log(player2.hand);
           player2.hold.push(whiteCardPlayed);
           player2.turnPlay = false;
           $(this).trigger('reset');
@@ -479,6 +472,7 @@ $(document).ready(function() {
         runPlayer3Turn();
       }
     }
+
     var runPlayer3Turn = function(){
       if (player3.turnPlay === true) {
         $("form#player3-hand").show();
@@ -498,7 +492,6 @@ $(document).ready(function() {
         $("form#player3-hand").submit(function(event) {
           event.preventDefault();
           var whiteCardPlayed = $("input[name='player3-hand']:checked").val();
-          console.log(player3.hand);
           if (player3.hand[0] === whiteCardPlayed) {
             player3.hand.splice(0,1);
           }
@@ -517,7 +510,6 @@ $(document).ready(function() {
           if (player3.hand[5] === whiteCardPlayed) {
             player3.hand.splice(5,1);
           }
-          console.log(player3.hand);
           player3.hold.push(whiteCardPlayed);
           player3.turnPlay = false;
           $(this).trigger('reset');
@@ -528,6 +520,7 @@ $(document).ready(function() {
         runPlayer4Turn();
       }
     }
+
     var runPlayer4Turn = function(){
       if (player4.turnPlay === true) {
         $("form#player4-hand").show();
@@ -547,7 +540,6 @@ $(document).ready(function() {
         $("form#player4-hand").submit(function(event) {
           event.preventDefault();
           var whiteCardPlayed = $("input[name='player4-hand']:checked").val();
-          console.log(player4.hand);
           if (player4.hand[0] === whiteCardPlayed) {
             player4.hand.splice(0,1);
           }
@@ -566,7 +558,6 @@ $(document).ready(function() {
           if (player4.hand[5] === whiteCardPlayed) {
             player4.hand.splice(5,1);
           }
-          console.log(player4.hand);
           player4.hold.push(whiteCardPlayed);
           player4.turnPlay = false;
           $(this).trigger('reset');
@@ -577,6 +568,7 @@ $(document).ready(function() {
         ShowWhiteCardPlayed();
       }
     }
+
     var ShowWhiteCardPlayed = function(){
       $("div#winner-pick-view").show();
       $("div.hide").hide();
@@ -597,6 +589,7 @@ $(document).ready(function() {
         $("span#played-white-card-four").text(player4.hold[1]);
       }
     }
+
     var drawBlackCard = function() {
       if (player1.turn === true) {
         player1.drawBlackHand(player1);
@@ -612,15 +605,5 @@ $(document).ready(function() {
         $("span#black-card-content").text(player4.blackCard);
       }
     }
-
-    var players = [player1, player2, player3, player4];
-    players.forEach(function (player){
-      if (checkForWin.player  === true) {
-        $("#winner-name").text(player.name);
-      } else {
-        $("#losers").append(" " + player.name + ",");
-        $("#hooray").show();
-      }
-    });  
   });
 });

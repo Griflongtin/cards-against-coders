@@ -1,4 +1,4 @@
-#game, #winner-pick-view, #black-card-draw, #round-start-view, #player1-hand, #player2-hand, #player3-hand, #player4-hand, .hide {
+#game, #winner-pick-view, #black-card-draw, #round-start-view, #player1-hand, #player2-hand, #player3-hand, #player4-hand, .hide, #play-next-round-view, .hooray{
   display: none;
 }
 
@@ -94,7 +94,7 @@ h2 {
 
 #SNL  {
   width: 100%;
-=======
+}
 .body-text {
   font-size: 20px;
   font-weight: bold;
