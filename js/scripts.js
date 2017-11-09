@@ -4,7 +4,7 @@ function Player(userName, playerNumber){
   this.points = 0;
   this.hand = [];
   this.blackCard = [];
-  this.hold = [];
+  this.hold = [1];
   this.turn = false;
   this.turnPlay = true;
 }
@@ -266,11 +266,17 @@ $(document).ready(function() {
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
       selectWinner(selectTheWinner);
       $(this).trigger('reset');
-      $("div#winner-pick-view").hide();
       endGame();
+      $("div#winner-pick-view").hide();
+      $("div#play-next-round-view").show();
+    });
+    
+    $("button#play-next-round").click(function() {
       drawAction();
       drawBlackCard();
-      runPlayer1Turn();
+      $("div#play-next-round-view").hide();
+      $("div#black-card-draw").show();
+      $("div#round-start-view").show();
     });
 
     var selectWinner = function(selectTheWinner){
