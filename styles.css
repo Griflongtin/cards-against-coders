@@ -1,0 +1,82 @@
+#game, #winner-pick-view, #black-card-draw, #player-hand-view, #round-start-view, .hide {
+  display: none;
+}
+
+h1 {
+  /*font-family: 'Titan One', cursive;*/
+  color: red;
+  font-size: 80px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.jumbotron {
+  background-color: black;
+}
+
+.score {
+  font-weight: bold;
+  color: #d74133;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+#score {
+  background-color: red;
+  padding: 1em;
+  margin: 2em;
+}
+
+#score ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#score ul li {
+  display: inline;
+  padding: .2em 1em;
+  color: black;
+  background-color: white;
+  font-size: 20px;
+}
+
+.btn-warning {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.black-card {
+  background-color: #1e2532;
+  color: #ffffff;
+  width: 50%;
+  height: 200px;
+  margin: auto;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.card-text {
+  font-size: 30px;
+}
+
+.black-card-title {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  text-align: center;
+}
+
+.name-display {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.card {
+  border-radius: 10px;
+}
