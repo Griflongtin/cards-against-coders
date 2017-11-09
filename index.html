@@ -24,21 +24,21 @@
           <div class="row">
             <div class="col">
               <div class="form-group">
-                <label for="player1-name">Player 1 Name: </label>
+                <label for="player1-name"><strong>Player 1 Name:</strong> </label>
                 <input type="text" class="form-control" id="player1-name" placeholder="Enter Player 1 Name">
               </div>
               <div class="form-group">
-                <label for="player2-name">Player 2 Name: </label>
+                <label for="player2-name"><strong>Player 2 Name:</strong></label>
                 <input type="text" class="form-control" id="player2-name" placeholder="Enter Player 2 Name">
               </div>
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="player3-name">Player 3 Name: </label>
+                <label for="player3-name"><strong>Player 3 Name:</strong> </label>
                 <input type="text" class="form-control" id="player3-name" placeholder="Enter Player 3 Name">
               </div>
               <div class="form-group">
-                <label for="player4-name">Player 4 Name: </label>
+                <label for="player4-name"><strong>Player 4 Name:</strong> </label>
                 <input type="text" class="form-control" id="player4-name" placeholder="Enter Player 4 Name">
               </div>
             </div>
@@ -61,9 +61,10 @@
       </ul>
       </div><!--close score ID-->
 
-      <div id="play-turn">
-        <button class="btn btn-warning btn-block btn-lg" type="button" id="button-black-card-draw">Play Turn</button>
-      </div>
+    <div id="play-turn">
+      <p class="body-text">Before we get started, all your players are over 18 and not easily offended, right? RIGHT?</p>
+      <button class="btn btn-warning btn-block btn-lg" type="button" id="button-black-card-draw">Great, let's get started</button>
+    </div>
 
     <div id="black-card-draw">
       <div class="card black-card">
@@ -75,12 +76,12 @@
     </div><!--close black card draw-->
 
     <div id="round-start-view">
-      <button id="round-start" class="btn btn-warning btn-block btn-lg" type="button">Pick card Player Round</button>
+      <button id="round-start" class="btn btn-warning btn-block btn-lg" type="button">That's your black card, let's draw some white cards!</button>
     </div>
 
     <div id="player-hand-view">
       <form id="player1-hand">
-        <h3 id="player1-name-display"></h3>
+        <h2><span id="player1-name-display"></span>, pick your card</h2>
           <div class="row">
 
           <div class="card-deck">
@@ -158,10 +159,10 @@
         </div><!--card deck-->
 
         </div><!--end of bottom row-->
-        <button type="submit"class="btn btn-warning">Submit your card</button>
+        <button type="submit" class="btn btn-warning btn-lg btn-block">Play that card you just picked</button>
       </form>
       <form id="player2-hand">
-        <h3 id="player2-name-display"></h3>
+        <h2><span id="player2-name-display"></span>, pick your card</h2>
           <div class="row">
 
           <div class="card-deck">
@@ -239,10 +240,10 @@
         </div><!--card deck-->
 
         </div><!--end of bottom row-->
-        <button type="submit" class="btn btn-warning">Submit your card</button>
+        <button type="submit" class="btn btn-warning btn-lg btn-block">Play that card you just picked</button>
       </form>
       <form id="player3-hand">
-        <h3 id="player3-name-display"></h3>
+        <h2><span id="player3-name-display"></span>, pick your card</h2>
           <div class="row">
 
           <div class="card-deck">
@@ -320,10 +321,10 @@
         </div><!--card deck-->
 
         </div><!--end of bottom row-->
-        <button type="submit" id="play-your-card" class="btn btn-warning">Submit your card</button>
+        <button type="submit" id="play-your-card" class="btn btn-warning btn-lg btn-block">Play that card you just picked</button>
       </form>
       <form id="player4-hand">
-        <h3 id="player4-name-display"></h3>
+        <h2><span id="player4-name-display"></span>, pick your card</h2>
           <div class="row">
 
           <div class="card-deck">
@@ -401,7 +402,7 @@
         </div><!--card deck-->
 
         </div><!--end of bottom row-->
-        <button type="submit" id="play-your-card" class="btn btn-warning">Submit your card</button>
+        <button type="submit" id="play-your-card" class="btn btn-warning btn-lg btn-block">Play that card you just picked</button>
       </form>
 
     </div><!--close player hand-->
@@ -458,7 +459,7 @@
         </div><!--card deck-->
 
         </div><!--end of bottom row-->
-        <button type="submit" id="judge-your-card" class="btn btn-warning">Submit Winner!</button>
+        <button type="submit" id="judge-your-card" class="btn btn-warning btn-lg btn-block">Black card holder - pick your winner</button>
       </form>
     </div><!--close winner pick-->
 

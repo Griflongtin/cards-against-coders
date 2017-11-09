@@ -19,10 +19,11 @@ h1 {
   font-size: 20px;
 }
 
-h3 {
+h2 {
   font-family: 'Fjalla One', sans-serif;
   font-size: 30px;
-  color: white;
+  color: red;
+  margin-top: 20px;
 }
 
 #score {
@@ -43,7 +44,10 @@ h3 {
   padding: .2em 1em;
   color: black;
   background-color: white;
-  font-size: 20px;
+  font-size: 18px;
+  border-style: dashed;
+  border-width: thin;
+  border-color: black;
 }
 
 .btn-warning {
@@ -55,7 +59,7 @@ h3 {
   background-color: #1e2532;
   color: #ffffff;
   width: 50%;
-  height: 200px;
+  height: 400px;
   margin: auto;
 }
 
@@ -83,4 +87,6 @@ h3 {
 
 .body-text {
   font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
