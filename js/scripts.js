@@ -242,7 +242,7 @@ Player.prototype.pointsToggle = function(playerNumber) {
 }
 
 Player.prototype.checkForWin = function(playerNumber) {
-  if (playerNumber.points === 3) {
+  if (playerNumber.points === 6) {
     playerNumber.win = true;
   }
 }
