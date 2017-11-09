@@ -465,7 +465,7 @@ $(document).ready(function() {
       }
       if (player2.turn === false) {
         $("div#card-two").show();
-        $("span#played-white-card-two").html(player2.hold);
+        $("span#played-white-card-two").text(player2.hold);
       }
       if (player3.turn === false) {
         $("div#card-three").show();

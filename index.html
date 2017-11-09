@@ -78,16 +78,17 @@
     </div>
 
     <div id="player-hand-view">
-      <form id="player-hand">
-        <h3 class="name-display" id="Player-name-display"></h3>
-        <div class="card-deck">
+      <form id="player1-hand">
+        <h3 id="Player1-name-display"></h3>
           <div class="row">
+
+          <div class="card-deck">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title"><span id="white-card-content-one">Card title</span></h4>
+                <h4 class="card-title"><span id="player1-card-content-one">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand" id="inlineRadio1" value="option1">
+                  <input class="form-check-input" id="player1-one-card" type="radio" name="player1-hand">
                   Play this card
                 </label>
               </div>
@@ -95,10 +96,10 @@
             </div>
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title"><span id="white-card-content-two">Card title</span></h4>
+                <h4 class="card-title"><span id="player1-card-content-two">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand" id="inlineRadio2" value="option2">
+                  <input class="form-check-input" id="player1-two-card" type="radio" name="player1-hand">
                   Play this card
                 </label>
               </div>
@@ -106,25 +107,26 @@
             </div>
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title"><span id="white-card-content-three">Card title</span></h4>
+                <h4 class="card-title"><span id="player1-card-content-three">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand" id="inlineRadio3" value="option3">
+                  <input class="form-check-input" id="player1-three-card" type="radio" name="player1-hand">
                   Play this card
                 </label>
               </div>
             </div>
           </div>
+          </div><!--card deck-->
         </div><!--top row of white cards-->
-      </div>
-      <div class="card-deck">
         <div class="row">
+
+          <div class="card-deck">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title"><span id="white-card-content-four">Card title</span></h4>
+                <h4 class="card-title"><span id="player1-card-content-four">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand" id="inlineRadio4" value="option4">
+                  <input class="form-check-input" id="player1-four-card" type="radio" name="player1-hand">
                   Play this card
                 </label>
                 </div><!--formcheck-->
@@ -132,10 +134,10 @@
             </div><!--card-->
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title"><span id="white-card-content-five">Card title</span></h4>
+                <h4 class="card-title"><span id="player1-card-content-five">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand" id="inlineRadio5" value="option5">
+                  <input class="form-check-input" id="player1-five-card" type="radio" name="player1-hand">
                   Play this card
                 </label>
               </div><!--form check-->
@@ -143,19 +145,264 @@
           </div><!--card-->
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title"><span id="white-card-content-six">Card title</span></h4>
+              <h4 class="card-title"><span id="player1-card-content-six">Card title</span></h4>
               <div class="form-check">
               <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="player-hand" id="inlineRadio6" value="option6">
+                <input class="form-check-input" id="player1-six-card" type="radio" name="player1-hand">
                 Play this card
               </label>
               </div><!--form check-->
             </div><!--card body-->
           </div><!--card-->
         </div><!--card deck-->
-      </div><!--end of bottom row-->
-      <button type="submit" id="play-your-card" class="btn btn-warning">Submit your card</button>
+
+        </div><!--end of bottom row-->
+        <button type="submit"class="btn btn-primary">Submit your card</button>
       </form>
+      <form id="player2-hand">
+        <h3 id="Player2-name-display"></h3>
+          <div class="row">
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player2-card-content-one">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player2-one-card" type="radio" name="player2-hand">
+                  Play this card
+                </label>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player2-card-content-two">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player2-two-card" type="radio" name="player2-hand">
+                  Play this card
+                </label>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player2-card-content-three">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player2-three-card" type="radio" name="player2-hand">
+                  Play this card
+                </label>
+              </div>
+            </div>
+          </div>
+          </div><!--card deck-->
+        </div><!--top row of white cards-->
+        <div class="row">
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player2-card-content-four">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player2-four-card" type="radio" name="player2-hand">
+                  Play this card
+                </label>
+                </div><!--formcheck-->
+              </div><!--card body-->
+            </div><!--card-->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player2-card-content-five">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player2-five-card" type="radio" name="player2-hand">
+                  Play this card
+                </label>
+              </div><!--form check-->
+            </div><!--card body-->
+          </div><!--card-->
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"><span id="player2-card-content-six">Card title</span></h4>
+              <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" id="player2-six-card" type="radio" name="player2-hand">
+                Play this card
+              </label>
+              </div><!--form check-->
+            </div><!--card body-->
+          </div><!--card-->
+        </div><!--card deck-->
+
+        </div><!--end of bottom row-->
+        <button type="submit" class="btn btn-primary">Submit your card</button>
+      </form>
+      <form id="player3-hand">
+        <h3 id="Player3-name-display"></h3>
+          <div class="row">
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player3-card-content-one">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player3-one-card" type="radio" name="player3-hand">
+                  Play this card
+                </label>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player3-card-content-two">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player3-two-card" type="radio" name="player3-hand">
+                  Play this card
+                </label>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player3-card-content-three">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player3-three-card"type="radio" name="player3-hand">
+                  Play this card
+                </label>
+              </div>
+            </div>
+          </div>
+          </div><!--card deck-->
+        </div><!--top row of white cards-->
+        <div class="row">
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player3-card-content-four">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player3-four-card" type="radio" name="player3-hand">
+                  Play this card
+                </label>
+                </div><!--formcheck-->
+              </div><!--card body-->
+            </div><!--card-->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player3-card-content-five">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player3-five-card" type="radio" name="player3-hand">
+                  Play this card
+                </label>
+              </div><!--form check-->
+            </div><!--card body-->
+          </div><!--card-->
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"><span id="player3-card-content-six">Card title</span></h4>
+              <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" id="player3-six-card" type="radio" name="player3-hand">
+                Play this card
+              </label>
+              </div><!--form check-->
+            </div><!--card body-->
+          </div><!--card-->
+        </div><!--card deck-->
+
+        </div><!--end of bottom row-->
+        <button type="submit" id="play-your-card" class="btn btn-primary">Submit your card</button>
+      </form>
+      <form id="player4-hand">
+        <h3 id="Player4-name-display"></h3>
+          <div class="row">
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player4-card-content-one">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player4-one-card" type="radio" name="player4-hand">
+                  Play this card
+                </label>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player4-card-content-two">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player4-two-card" type="radio" name="player4-hand">
+                  Play this card
+                </label>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player4-card-content-three">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player4-three-card" type="radio" name="player4-hand">
+                  Play this card
+                </label>
+              </div>
+            </div>
+          </div>
+          </div><!--card deck-->
+        </div><!--top row of white cards-->
+        <div class="row">
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player4-card-content-four">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player4-four-card" type="radio" name="player4-hand">
+                  Play this card
+                </label>
+                </div><!--formcheck-->
+              </div><!--card body-->
+            </div><!--card-->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><span id="player4-card-content-five">Card title</span></h4>
+                <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" id="player4-five-card"type="radio" name="player4-hand">
+                  Play this card
+                </label>
+              </div><!--form check-->
+            </div><!--card body-->
+          </div><!--card-->
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"><span id="player4-card-content-six">Card title</span></h4>
+              <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" id="player4-six-card" type="radio" name="player4-hand">
+                Play this card
+              </label>
+              </div><!--form check-->
+            </div><!--card body-->
+          </div><!--card-->
+        </div><!--card deck-->
+
+        </div><!--end of bottom row-->
+        <button type="submit" id="play-your-card" class="btn btn-primary">Submit your card</button>
+      </form>
+
     </div><!--close player hand-->
 
 
@@ -168,7 +415,7 @@
                 <h4 class="card-title"><span id="played-white-card-one">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand-selected" id="player-hand-selected1" value="1">
+                  <input class="form-check-input" type="radio" name="player-hand-selected">
                   Play this card
                 </label>
                 </div><!--formcheck-->
@@ -179,7 +426,7 @@
                 <h4 class="card-title"><span id="played-white-card-two">Card title</span></h4>
                 <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="player-hand-selected" id="player-hand-selected2" value="2">
+                  <input class="form-check-input" type="radio" name="player-hand-selected">
                   Play this card
                 </label>
               </div><!--form check-->
@@ -190,7 +437,7 @@
               <h4 class="card-title"><span id="played-white-card-three">Card title</span></h4>
               <div class="form-check">
               <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="player-hand-selected" id="player-hand-selected3" value="3">
+                <input class="form-check-input" type="radio" name="player-hand-selected">
                 Play this card
               </label>
               </div><!--form check-->
@@ -201,7 +448,7 @@
               <h4 class="card-title"><span id="played-white-card-four">Card title</span></h4>
               <div class="form-check">
               <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="player-hand-selected" id="player-hand-selected3" value="3">
+                <input class="form-check-input" type="radio" name="player-hand-selected">
                 Play this card
               </label>
               </div><!--form check-->
@@ -210,7 +457,7 @@
         </div><!--card deck-->
 
         </div><!--end of bottom row-->
-        <button type="submit" id="judge-your-card" class="btn btn-warning">Submit Winner!</button>
+        <button type="submit" id="judge-your-card" class="btn btn-primary">Submit Winner!</button>
       </form>
     </div><!--close winner pick-->
 
