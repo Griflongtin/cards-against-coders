@@ -1,4 +1,4 @@
-#game, #winner-pick-view, #black-card-draw, #round-start-view, #player1-hand, #player2-hand, #player3-hand, #player4-hand, .hide {
+#game, #winner-pick-view, #black-card-draw, #player-hand-view, #round-start-view, .hide {
   display: none;
 }
 
@@ -19,11 +19,10 @@ h1 {
   font-size: 20px;
 }
 
-h2 {
+h3 {
   font-family: 'Fjalla One', sans-serif;
   font-size: 30px;
-  color: red;
-  margin-top: 20px;
+  color: white;
 }
 
 #score {
@@ -44,10 +43,7 @@ h2 {
   padding: .2em 1em;
   color: black;
   background-color: white;
-  font-size: 18px;
-  border-style: dashed;
-  border-width: thin;
-  border-color: black;
+  font-size: 20px;
 }
 
 .btn-warning {
@@ -59,8 +55,12 @@ h2 {
   background-color: #1e2532;
   color: #ffffff;
   width: 50%;
-  height: 400px;
+  height: 200px;
   margin: auto;
+}
+
+.card {
+  margin-top: 20px;
 }
 
 .card-text {
@@ -79,33 +79,4 @@ h2 {
 
 .card {
   border-radius: 10px;
-  margin-top: 20px;
-}
-
-.whitecard {
-  width: 335px;
-}
-
-.hooray {
-  font-size: 50px;
-  font-family: 'Fjalla One', sans-serif;
-
-}
-
-#SNL  {
-  width: 100%;
-=======
-.body-text {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.sorry {
-  background-color: pink;
-}
-
-.iframe {
-  display:block;
-  margin: 0 auto;
 }

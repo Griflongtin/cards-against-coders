@@ -19,21 +19,34 @@ var blackTwo = new Card("Alternative medicine is now embracing the curative powe
 var blackThree = new Card("Why can't I sleep at night?");
 var blackFour = new Card("What's that sound?");
 var blackFive= new Card ("What is Batman's guilty pleasure?");
-var blackSix = new Card ("I'm sorry, Dave, but I couldn't complete my homework because of __________.");
+var blackSix = new Card ("I'm sorry Dave. But I couldn't complete my homework because of __________.");
 var blackSeven = new Card ("What's a coder's best friend?");
 var blackEight = new Card ("I get by with a little help from __________.");
 var blackNine = new Card ("__________. Betcha can't have just one!");
 var blackTen = new Card ("Programmers like __________.");
-var blackEleven = new Card ("__________. High five, bro.");
+var blackEleven = new Card ("__________. High five bro.");
 var blackTwelve = new Card ("In 1000 years, when paper money is a distant memory, how will we pay for goods and services?");
 var blackThirteen = new Card ("What are my parents hiding from me?");
 var blackFourteen = new Card ("How am I maintaining my relationship status?");
 var blackFifteen = new Card ("__________. It's a trap!");
 var blackSixteen = new Card ("The class field trip was completely ruined by __________.");
 var blackSeventeen = new Card ("What will I bring back in time to convince people that I am a powerful wizard?");
-var blackEighteen = new Card ("But before I kill you, Mr. Bond, I must show you __________.");
+var blackEighteen = new Card ("But before I kill you Mr. Bond. I must show you __________.");
 var blackNineteen = new Card ("While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on __________.");
-var blackTwenty = new Card ("Daddy, why is mommy crying?");
+var blackTwenty = new Card ("Daddy? why is mommy crying?");
+//Start of Expansion Pack of Black Cards:
+var blackTwentyOne = new Card ("Undefined is null or not ______.");
+var blackTwentyTwo = new Card ("________ error has occurred. Do you wish to continue?");
+var blackTwentyThree = new Card ("programmer: An organism that turns _______ into software.");
+var blackTwentyFour = new Card ("________ invented the Internet.");
+var blackTwentyFive = new Card ("1 in 5 coders will experiment with ____________.");
+var blackTwentySix = new Card (" ___________ is out of date.");
+var blackTwentySeven = new Card ("________ are here because you broke something.");
+var blackTwentyEight = new Card ("Why did the programmer quit his/her job?");
+var blackTwentyNine = new Card ("______ write code that optimizes itself.");
+var blackThirty = new Card ("Bill Gates, Mark Zuckerberg and _________ walk into a bar.");
+var blackThirtyOne = new Card ("There's an app for ___________.");
+var blackThirtyTwo = new Card ("And the Webby goes to _________.");
 // end of black cards - Start of white Cards
 var whiteOne = new Card("Daddy issues.");
 var whiteTwo = new Card("King Kong.");
@@ -173,9 +186,24 @@ var whiteOneHundredThirtyFive = new Card ("The Amish.");
 var whiteOneHundredThirtySix = new Card ("Truthy. Falsey.");
 var whiteOneHundredThirtySeven = new Card ("[Object Object]");
 var whiteOneHundredThirtyEight = new Card ("The Pope.");
+//Expansion Pack for White Cards:
+var whiteOneHundredThirtyNine = new Card ("That doesn't look right");
+var whiteOneHundredForty = new Card ("Computer Science");
+var whiteOneHundredFortyOne = new Card ("Internet Explorer");
+var whiteOneHundredFortyTwo = new Card ("Google it.");
+var whiteOneHundredFortyThree = new Card ("Agile");
+var whiteOneHundredFortyFour = new Card ("Foo bar");
+var whiteOneHundredFortyFive = new Card ("Hello World!");
+var whiteOneHundredFortySix = new Card ("Y2K");
+var whiteOneHundredFortySeven = new Card ("Homestar runner.");
+var whiteOneHundredFortyEight = new Card ("Nyan cat.");
+var whiteOneHundredFortyNine = new Card ("Whiteboarding");
+var whiteOneHundredFifty = new Card ("Siri");
+var whiteOneHundredFiftyOne = new Card ("The Millennium Falcon");
+
 // end of white cards
-var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty];
-var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight];
+var blackCards = [blackOne, blackTwo, blackThree, blackFour, blackFive, blackSix, blackSeven, blackEight, blackNine, blackTen, blackEleven, blackTwelve, blackThirteen, blackFourteen, blackFifteen, blackSixteen, blackSeventeen, blackEighteen, blackNineteen, blackTwenty, blackTwentyOne, blackTwentyTwo, blackTwentyThree, blackTwentyFour, blackTwentyFive, blackTwentySix, blackTwentySeven, blackTwentyEight, blackTwentyNine, blackThirty, blackThirtyOne, blackThirtyTwo];
+var whiteCards = [whiteOne, whiteTwo, whiteThree, whiteFour, whiteFive, whiteSix, whiteSeven, whiteEight, whiteNine, whiteTen, whiteEleven, whiteTwelve, whiteThirteen, whiteFourteen, whiteFifteen, whiteSixteen, whiteSeventeen, whiteEighteen, whiteNineteen, whiteTwenty, whiteTwentyOne, whiteTwentyTwo, whiteTwentyThree, whiteTwentyFour, whiteTwentyFive, whiteTwentySix, whiteTwentySeven, whiteTwentyEight, whiteTwentyNine, whiteThirty, whiteThirtyOne, whiteThirtyTwo, whiteThirtyThree, whiteThirtyFour, whiteThirtyFive, whiteThirtySix, whiteThirtySeven, whiteThirtyEight, whiteThirtyNine, whiteForty, whiteFortyOne, whiteFortyTwo, whiteFortyThree, whiteFortyFour, whiteFortyFive, whiteFortySix, whiteFortySeven, whiteFortyEight, whiteFortyNine, whiteFifty, whiteFiftyOne, whiteFiftyTwo, whiteFiftyThree, whiteFiftyFour, whiteFiftyFive, whiteFiftySix, whiteFiftySeven, whiteFiftyEight, whiteFiftyNine, whiteSixty, whiteSixtyOne, whiteSixtyTwo, whiteSixtyThree, whiteSixtyFour, whiteSixtyFive, whiteSixtySix, whiteSixtySeven, whiteSixtyEight, whiteSixtyNine, whiteSeventy, whiteSeventyOne, whiteSeventyTwo, whiteSeventyThree, whiteSeventyFour, whiteSeventyFive, whiteSeventySix, whiteSeventySeven, whiteSeventyEight, whiteSeventyNine, whiteEighty, whiteEightyOne, whiteEightyTwo, whiteEightyThree, whiteEightyFour, whiteEightyFive, whiteEightySix, whiteEightySeven, whiteEightyEight, whiteEightyNine, whiteNinety, whiteNinetyOne, whiteNinetyTwo, whiteNinetyThree, whiteNinetyFour, whiteNinetyFive, whiteNinetySix, whiteNinetySeven, whiteNinetyEight, whiteNinetyNine, whiteOneHundred, whiteOneHundredOne, whiteOneHundredTwo, whiteOneHundredThree, whiteOneHundredFour, whiteOneHundredFive, whiteOneHundredSix, whiteOneHundredSeven, whiteOneHundredEight, whiteOneHundredNine, whiteOneHundredTen, whiteOneHundredEleven, whiteOneHundredTwelve, whiteOneHundredThirteen, whiteOneHundredFourteen, whiteOneHundredFifteen, whiteOneHundredSixteen, whiteOneHundredSeventeen, whiteOneHundredEighteen, whiteOneHundredNineteen, whiteOneHundredTwenty, whiteOneHundredTwentyOne, whiteOneHundredTwentyTwo, whiteOneHundredTwentyThree, whiteOneHundredTwentyFour, whiteOneHundredTwentyFive, whiteOneHundredTwentySix, whiteOneHundredTwentySeven, whiteOneHundredTwentyEight, whiteOneHundredTwentyNine, whiteOneHundredThirtyOne, whiteOneHundredThirtyTwo, whiteOneHundredThirtyThree, whiteOneHundredThirtyFour, whiteOneHundredThirtyFive, whiteOneHundredThirtySix, whiteOneHundredThirtySeven, whiteOneHundredThirtyEight, whiteOneHundredThirtyNine, whiteOneHundredForty, whiteOneHundredFortyOne, whiteOneHundredFortyTwo, whiteOneHundredFortyThree, whiteOneHundredFortyFour, whiteOneHundredFortyFive, whiteOneHundredFortySix, whiteOneHundredFortySeven, whiteOneHundredFortyEight, whiteOneHundredFortyNine, whiteOneHundredFifty, whiteOneHundredFiftyOne];
 
 Player.prototype.drawBlack = function(){
   var cardDraw = Math.floor(Math.random() * blackCards.length);
@@ -203,6 +231,9 @@ Player.prototype.drawHand = function(playerNumber){
 
 Player.prototype.reset = function(playerNumber) {
   playerNumber.blackCard = [];
+  playerNumber.hold = [1];
+  playerNumber.turn = false;
+  playerNumber.turnPlay = true;
 }
 
 Player.prototype.pointsToggle = function(playerNumber) {
@@ -214,34 +245,6 @@ Player.prototype.checkForWin = function(playerNumber) {
     return true
   }
 }
-
-// player1.drawHand(player1);
-// console.log(player1.hand);
-// player2.drawHand(player2);
-// console.log(player2.hand);
-// player3.drawHand(player3);
-// console.log(player3.hand);
-// player4.drawHand(player4);
-// console.log(player4.hand);
-// draw black card for playesr
-
-
-// console.log(player1);
-// console.log(player2);
-// console.log(player3);
-// console.log(player4);
-//
-
-//
-// console.log(whiteCards);
-// console.log(whiteCards.length);
-
-// function viewManager() {
-//   // $("div#start-view").hide();
-//   $("div#black-card-draw").hide();
-//   $("div#player-hand-view").hide();
-//   $("div#winner-pick-view").hide();
-//   }
 
 //start front end
 
@@ -264,6 +267,10 @@ $(document).ready(function() {
     $("#player-name-two").text(player2.name);
     $("#player-name-three").text(player3.name);
     $("#player-name-four").text(player4.name);
+    $("span#player1-score").text(player1.points);
+    $("span#player2-score").text(player2.points);
+    $("span#player3-score").text(player3.points);
+    $("span#player4-score").text(player4.points);
     // hide start view, reveal black-card-draw and player-hand-view
     $("div#load").hide();
     $("#game").show();
@@ -271,19 +278,7 @@ $(document).ready(function() {
 
     $("button#button-black-card-draw").click(function() {
       drawAction();
-      if (player1.turn === true) {
-        player1.drawBlackHand(player1);
-        $("span#black-card-content").text(player1.blackCard);
-      } else if ( player2.turn === true) {
-        player2.drawBlackHand(player2);
-        $("span#black-card-content").text(player2.blackCard);
-      } else if ( player3.turn === true) {
-        player3.drawBlackHand(player3);
-        $("span#black-card-content").text(player3.blackCard);
-      }else if( player4.turn === true) {
-        player4.drawBlackHand(player4);
-        $("span#black-card-content").text(player4.blackCard);
-      }
+      drawBlackCard();
       $("div#play-turn").hide();
       $("div#black-card-draw").show();
       $("div#round-start-view").show();
@@ -291,50 +286,304 @@ $(document).ready(function() {
 
     $("button#round-start").click(function() {
       $("div#round-start-view").hide();
-      checkTurn();
+      runPlayer1Turn();
     });
 
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
 
-
-
-
-
-      // Adds point to winner and scoreboard
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
-        if (selectTheWinner === "1") {
-          player1.points += 1;
-          $("span#player1-score").text(player1.points);
-        } else if (selectTheWinner === "2") {
-          player2.points += 1;
-          $("span#player2-score").text(player2.points);
-        } else if (selectTheWinner === "3") {
-          player3.points += 1;
-          $("span#player3-score").text(player3.points);
-        } else if (selectTheWinner === "4") {
-          player4.points += 1;
-          $("span#player4-score").text(player4.points);
-        }
-      // Check each player's total against the goal and resets black card
-      player1.checkForWin(player1);
-      player2.checkForWin(player2);
-      player3.checkForWin(player3);
-      player4.checkForWin(player4);
-      player1.reset(player1);
-      player2.reset(player2);
-      player3.reset(player3);
-      player4.reset(player4);
-      // Draws new black card for next round:
-      var drawAction = function(){
-        player1.drawHand(player1);
-        player2.drawHand(player2);
-        player3.drawHand(player3);
-        player4.drawHand(player4);
-      }
-      // Draws new black card for next round.
-  //This will need to loop:
+      selectWinner(selectTheWinner);
+      $(this).trigger('reset');
+      $("div#winner-pick-view").hide();
+      endGame();
       drawAction();
+      drawBlackCard();
+      runPlayer1Turn();
+    });
+
+    var selectWinner = function(selectTheWinner){
+      if (selectTheWinner === "1") {
+        player1.points += 1;
+        $("span#player1-score").text(player1.points);
+      } else if (selectTheWinner === "2") {
+        player2.points += 1;
+        $("span#player2-score").text(player2.points);
+      } else if (selectTheWinner === "3") {
+        player3.points += 1;
+        $("span#player3-score").text(player3.points);
+      } else if (selectTheWinner === "4") {
+        player4.points += 1;
+        $("span#player4-score").text(player4.points);
+      }
+    }
+    var endGame = function() {
+      if(player1.checkForWin(player1) === true){
+        alert(player1.name + " ,You won!");
+      }
+      if(player2.checkForWin(player2) === true){
+        alert(player2.name + " ,You won!");
+      }
+      if(player3.checkForWin(player3) === true){
+        alert(player3.name + " ,You won!");
+      }
+      if(player4.checkForWin(player4) === true){
+        alert(player4.name + " ,You won!");
+      }
+      if (player1.turn === true) {
+        player1.reset(player1);
+        player2.reset(player2);
+        player3.reset(player3);
+        player4.reset(player4);
+        player2.turn = true;
+        player2.turnPlay = false;
+      } else if (player2.turn === false) {
+        player1.reset(player1);
+        player2.reset(player2);
+        player3.reset(player3);
+        player4.reset(player4);
+        player2.turn = true;
+        player2.turnPlay = false;
+      } else if (player3.turn === false) {
+        player1.reset(player1);
+        player2.reset(player2);
+        player3.reset(player3);
+        player4.reset(player4);
+        player4.turn = true;
+        player4.turnPlay = false;
+      } else if (player4.turn === false) {
+        player1.reset(player1);
+        player2.reset(player2);
+        player3.reset(player3);
+        player4.reset(player4);
+        player1.turn = true;
+        player1.turnPlay = false;
+      }
+    }
+    var drawAction = function(){
+      player1.drawHand(player1);
+      player2.drawHand(player2);
+      player3.drawHand(player3);
+      player4.drawHand(player4);
+    }
+    var runPlayer1Turn = function(){
+      if (player1.turnPlay === true) {
+        $("form#player1-hand").show();
+        $("#player1-name-display").text(player1.name);
+        $("span#player1-card-content-one").text(player1.hand[0]);
+        $("input#player1-one-card").val(player1.hand[0]);
+        $("span#player1-card-content-two").text(player1.hand[1]);
+        $("input#player1-two-card").val(player1.hand[0]);
+        $("span#player1-card-content-three").text(player1.hand[2]);
+        $("input#player1-three-card").val(player1.hand[0]);
+        $("span#player1-card-content-four").text(player1.hand[3]);
+        $("input#player1-four-card").val(player1.hand[0]);
+        $("span#player1-card-content-five").text(player1.hand[4]);
+        $("input#player1-five-card").val(player1.hand[0]);
+        $("span#player1-card-content-six").text(player1.hand[5]);
+        $("input#player1-six-card").val(player1.hand[0]);
+        $("form#player1-hand").submit(function(event) {
+          event.preventDefault();
+          var whiteCardPlayed = $("input[name='player1-hand']:checked").val();
+          console.log(player1.hand);
+          if (player1.hand[0] === whiteCardPlayed) {
+            player1.hand.splice(0,1);
+          }
+          if (player1.hand[1] === whiteCardPlayed) {
+            player1.hand.splice(1,1);
+          }
+          if (player1.hand[2] === whiteCardPlayed) {
+            player1.hand.splice(2,1);
+          }
+          if (player1.hand[3] === whiteCardPlayed) {
+            player1.hand.splice(3,1);
+          }
+          if (player1.hand[4] === whiteCardPlayed) {
+            player1.hand.splice(4,1);
+          }
+          if (player1.hand[5] === whiteCardPlayed) {
+            player1.hand.splice(5,1);
+          }
+          console.log(player1.hand);
+          player1.hold.push(whiteCardPlayed);
+          player1.turnPlay = false;
+          $(this).trigger('reset');
+          $("form#player1-hand").hide();
+          runPlayer2Turn();
+        });
+      } else {
+        runPlayer2Turn();
+      }
+    }
+    var runPlayer2Turn = function(){
+      if (player2.turnPlay === true) {
+        $("form#player2-hand").show();
+        $("#player2-name-display").text(player2.name);
+        $("span#player2-card-content-one").text(player2.hand[0]);
+        $("input#player2-one-card").val(player2.hand[0]);
+        $("span#player2-card-content-two").text(player2.hand[1]);
+        $("input#player2-two-card").val(player2.hand[1]);
+        $("span#player2-card-content-three").text(player2.hand[2]);
+        $("input#player2-three-card").val(player2.hand[2]);
+        $("span#player2-card-content-four").text(player2.hand[3]);
+        $("input#player2-four-card").val(player2.hand[3]);
+        $("span#player2-card-content-five").text(player2.hand[4]);
+        $("input#player2-five-card").val(player2.hand[4]);
+        $("span#player2-card-content-six").text(player2.hand[5]);
+        $("input#player2-six-card").val(player2.hand[5]);
+        $("form#player2-hand").submit(function(event) {
+          event.preventDefault();
+          var whiteCardPlayed = $("input[name='player2-hand']:checked").val();
+          console.log(player2.hand);
+          if (player2.hand[0] === whiteCardPlayed) {
+            player2.hand.splice(0,1);
+          }
+          if (player2.hand[1] === whiteCardPlayed) {
+            player2.hand.splice(1,1);
+          }
+          if (player2.hand[2] === whiteCardPlayed) {
+            player2.hand.splice(2,1);
+          }
+          if (player2.hand[3] === whiteCardPlayed) {
+            player2.hand.splice(3,1);
+          }
+          if (player2.hand[4] === whiteCardPlayed) {
+            player2.hand.splice(4,1);
+          }
+          if (player2.hand[5] === whiteCardPlayed) {
+            player2.hand.splice(5,1);
+          }
+          player2.hand.splice(2,1);
+          console.log(player2.hand);
+          player2.hold.push(whiteCardPlayed);
+          player2.turnPlay = false;
+          $(this).trigger('reset');
+          $("form#player2-hand").hide();
+          runPlayer3Turn();
+        });
+      } else {
+        runPlayer3Turn();
+      }
+    }
+    var runPlayer3Turn = function(){
+      if (player3.turnPlay === true) {
+        $("form#player3-hand").show();
+        $("#player3-name-display").text(player3.name);
+        $("span#player3-card-content-one").text(player3.hand[0]);
+        $("input#player3-one-card").val(player3.hand[0]);
+        $("span#player3-card-content-two").text(player3.hand[1]);
+        $("input#player3-two-card").val(player3.hand[1]);
+        $("span#player3-card-content-three").text(player3.hand[2]);
+        $("input#player3-three-card").val(player3.hand[2]);
+        $("span#player3-card-content-four").text(player3.hand[3]);
+        $("input#player3-four-card").val(player3.hand[3]);
+        $("span#player3-card-content-five").text(player3.hand[4]);
+        $("input#player3-five-card").val(player3.hand[4]);
+        $("span#player3-card-content-six").text(player3.hand[5]);
+        $("input#player3-six-card").val(player3.hand[5]);
+        $("form#player3-hand").submit(function(event) {
+          event.preventDefault();
+          var whiteCardPlayed = $("input[name='player3-hand']:checked").val();
+          console.log(player3.hand);
+          if (player3.hand[0] === whiteCardPlayed) {
+            player3.hand.splice(0,1);
+          }
+          if (player3.hand[1] === whiteCardPlayed) {
+            player3.hand.splice(1,1);
+          }
+          if (player3.hand[2] === whiteCardPlayed) {
+            player3.hand.splice(2,1);
+          }
+          if (player3.hand[3] === whiteCardPlayed) {
+            player3.hand.splice(3,1);
+          }
+          if (player3.hand[4] === whiteCardPlayed) {
+            player3.hand.splice(4,1);
+          }
+          if (player3.hand[5] === whiteCardPlayed) {
+            player3.hand.splice(5,1);
+          }
+          console.log(player3.hand);
+          player3.hold.push(whiteCardPlayed);
+          player3.turnPlay = false;
+          $(this).trigger('reset');
+          $("form#player3-hand").hide();
+          runPlayer4Turn();
+        });
+      }else {
+        runPlayer4Turn();
+      }
+    }
+    var runPlayer4Turn = function(){
+      if (player4.turnPlay === true) {
+        $("form#player4-hand").show();
+        $("#player4-name-display").text(player4.name);
+        $("span#player4-card-content-one").text(player4.hand[0]);
+        $("input#player4-one-card").val(player4.hand[0]);
+        $("span#player4-card-content-two").text(player4.hand[1]);
+        $("input#player4-two-card").val(player4.hand[1]);
+        $("span#player4-card-content-three").text(player4.hand[2]);
+        $("input#player4-three-card").val(player4.hand[2]);
+        $("span#player4-card-content-four").text(player4.hand[3]);
+        $("input#player4-four-card").val(player4.hand[3]);
+        $("span#player4-card-content-five").text(player4.hand[4]);
+        $("input#player4-five-card").val(player4.hand[4]);
+        $("span#player4-card-content-six").text(player4.hand[5]);
+        $("input#player4-six-card").val(player4.hand[5]);
+        $("form#player4-hand").submit(function(event) {
+          event.preventDefault();
+          var whiteCardPlayed = $("input[name='player4-hand']:checked").val();
+          console.log(player4.hand);
+          if (player4.hand[0] === whiteCardPlayed) {
+            player4.hand.splice(0,1);
+          }
+          if (player4.hand[1] === whiteCardPlayed) {
+            player4.hand.splice(1,1);
+          }
+          if (player4.hand[2] === whiteCardPlayed) {
+            player4.hand.splice(2,1);
+          }
+          if (player4.hand[3] === whiteCardPlayed) {
+            player4.hand.splice(3,1);
+          }
+          if (player4.hand[4] === whiteCardPlayed) {
+            player4.hand.splice(4,1);
+          }
+          if (player4.hand[5] === whiteCardPlayed) {
+            player4.hand.splice(5,1);
+          }
+          console.log(player4.hand);
+          player4.hold.push(whiteCardPlayed);
+          player4.turnPlay = false;
+          $(this).trigger('reset');
+          $("form#player4-hand").hide();
+          ShowWhiteCardPlayed();
+        });
+      }else {
+        ShowWhiteCardPlayed();
+      }
+    }
+    var ShowWhiteCardPlayed = function(){
+      $("div#winner-pick-view").show();
+      $("div.hide").hide();
+      if (player1.turn === false){
+        $("div#card-one").show();
+        $("span#played-white-card-one").text(player1.hold[1]);
+      }
+      if (player2.turn === false) {
+        $("div#card-two").show();
+        $("span#played-white-card-two").text(player2.hold[1]);
+      }
+      if (player3.turn === false) {
+        $("div#card-three").show();
+        $("span#played-white-card-three").text(player3.hold[1]);
+      }
+      if (player4.turn === false) {
+        $("div#card-four").show();
+        $("span#played-white-card-four").text(player4.hold[1]);
+      }
+    }
+    var drawBlackCard = function() {
       if (player1.turn === true) {
         player1.drawBlackHand(player1);
         $("span#black-card-content").text(player1.blackCard);
@@ -347,191 +596,6 @@ $(document).ready(function() {
       }else if( player4.turn === true) {
         player4.drawBlackHand(player4);
         $("span#black-card-content").text(player4.blackCard);
-      }
-
-      $("div#round-start-view").hide();
-      $("div#player-hand-view").show();
-      checkTurn();
-
-    });
-    // Winner Page here:
-    // $("#game").hide();
-    // $(".hooray").show();
-
-
-
-    // Start of Interface functions
-
-    var drawAction = function(){
-      player1.drawHand(player1);
-      player2.drawHand(player2);
-      player3.drawHand(player3);
-      player4.drawHand(player4);
-    }
-
-    var runPlayer1Turn = function(){
-      $("#player1-name-display").text(player1.name);
-      $("span#player1-card-content-one").text(player1.hand[0]);
-      $("input#player1-one-card").val(player1.hand[0]);
-      $("span#player1-card-content-two").text(player1.hand[1]);
-      $("input#player1-two-card").val(player1.hand[0]);
-      $("span#player1-card-content-three").text(player1.hand[2]);
-      $("input#player1-three-card").val(player1.hand[0]);
-      $("span#player1-card-content-four").text(player1.hand[3]);
-      $("input#player1-four-card").val(player1.hand[0]);
-      $("span#player1-card-content-five").text(player1.hand[4]);
-      $("input#player1-five-card").val(player1.hand[0]);
-      $("span#player1-card-content-six").text(player1.hand[5]);
-      $("input#player1-six-card").val(player1.hand[0]);
-      $("form#player1-hand").submit(function(event) {
-        event.preventDefault();
-        var whiteCardPlayed = $("input[name='player1-hand']:checked").val();
-        console.log(whiteCardPlayed);
-        player1.hold.push(whiteCardPlayed);
-        //Things we need here on this button click:
-        // Assign card to empty array for player
-        // Trigger function/Reset for next player selection (2x)
-        // on the last player's turn, hide view, and show winner-pick-view
-        player1.turnPlay = false;
-        console.log(player1);
-        console.log(player1.turnPlay);
-        $(this).trigger('reset');
-        $("form#player1-hand").hide();
-        checkTurn();
-      });
-    }
-
-    var runPlayer2Turn = function(){
-      $("#player2-name-display").text(player2.name);
-      $("span#player2-card-content-one").text(player2.hand[0]);
-      $("input#player2-one-card").val(player2.hand[0]);
-      $("span#player2-card-content-two").text(player2.hand[1]);
-      $("input#player2-two-card").val(player2.hand[1]);
-      $("span#player2-card-content-three").text(player2.hand[2]);
-      $("input#player2-three-card").val(player2.hand[2]);
-      $("span#player2-card-content-four").text(player2.hand[3]);
-      $("input#player2-four-card").val(player2.hand[3]);
-      $("span#player2-card-content-five").text(player2.hand[4]);
-      $("input#player2-five-card").val(player2.hand[4]);
-      $("span#player2-card-content-six").text(player2.hand[5]);
-      $("input#player2-six-card").val(player2.hand[5]);
-      $("form#player2-hand").submit(function(event) {
-        event.preventDefault();
-        var whiteCardPlayed = $("input[name='player2-hand']:checked").val();
-        console.log(whiteCardPlayed);
-        player2.hold.push(whiteCardPlayed);
-        //Things we need here on this button click:
-        // Assign card to empty array for player
-        // Trigger function/Reset for next player selection (2x)
-        // on the last player's turn, hide view, and show winner-pick-view
-        player2.turnPlay = false;
-        console.log(player2);
-        console.log(player2.turnPlay);
-        $(this).trigger('reset');
-        $("form#player2-hand").hide();
-        checkTurn();
-      });
-    }
-
-    var runPlayer3Turn = function(){
-      $("#player3-name-display").text(player3.name);
-      $("span#player3-card-content-one").text(player3.hand[0]);
-      $("input#player3-one-card").val(player3.hand[0]);
-      $("span#player3-card-content-two").text(player3.hand[1]);
-      $("input#player3-two-card").val(player3.hand[1]);
-      $("span#player3-card-content-three").text(player3.hand[2]);
-      $("input#player3-three-card").val(player3.hand[2]);
-      $("span#player3-card-content-four").text(player3.hand[3]);
-      $("input#player3-four-card").val(player3.hand[3]);
-      $("span#player3-card-content-five").text(player3.hand[4]);
-      $("input#player3-five-card").val(player3.hand[4]);
-      $("span#player3-card-content-six").text(player3.hand[5]);
-      $("input#player3-six-card").val(player3.hand[5]);
-      $("form#player3-hand").submit(function(event) {
-        event.preventDefault();
-        var whiteCardPlayed = $("input[name='player3-hand']:checked").val();
-        console.log(whiteCardPlayed);
-        player3.hold.push(whiteCardPlayed);
-        //Things we need here on this button click:
-        // Assign card to empty array for player
-        // Trigger function/Reset for next player selection (2x)
-        // on the last player's turn, hide view, and show winner-pick-view
-        player3.turnPlay = false;
-        console.log(player3);
-        console.log(player3.turnPlay);
-        $(this).trigger('reset');
-        $("form#player3-hand").hide();
-        checkTurn();
-      });
-    }
-    var runPlayer4Turn = function(){
-      $("#player4-name-display").text(player4.name);
-      $("span#player4-card-content-one").text(player4.hand[0]);
-      $("input#player4-one-card").val(player4.hand[0]);
-      $("span#player4-card-content-two").text(player4.hand[1]);
-      $("input#player4-two-card").val(player4.hand[1]);
-      $("span#player4-card-content-three").text(player4.hand[2]);
-      $("input#player4-three-card").val(player4.hand[2]);
-      $("span#player4-card-content-four").text(player4.hand[3]);
-      $("input#player4-four-card").val(player4.hand[3]);
-      $("span#player4-card-content-five").text(player4.hand[4]);
-      $("input#player4-five-card").val(player4.hand[4]);
-      $("span#player4-card-content-six").text(player4.hand[5]);
-      $("input#player4-six-card").val(player4.hand[5]);
-      $("form#player4-hand").submit(function(event) {
-        event.preventDefault();
-        var whiteCardPlayed = $("input[name='player4-hand']:checked").val();
-        console.log(whiteCardPlayed);
-        player4.hold.push(whiteCardPlayed);
-        //Things we need here on this button click:
-        // Assign card to empty array for player
-        // Trigger function/Reset for next player selection (2x)
-        // on the last player's turn, hide view, and show winner-pick-view
-        player4.turnPlay = false;
-        console.log(player4);
-        console.log(player4.turnPlay);
-        $(this).trigger('reset');
-        $("form#player4-hand").hide();
-        checkTurn();
-      });
-    }
-
-    var checkTurn = function(){
-      if (player1.turnPlay === true) {
-        $("form#player1-hand").show();
-        runPlayer1Turn();
-      } else if (player2.turnPlay === true){
-        $("form#player2-hand").show();
-        runPlayer2Turn();
-      } else if (player3.turnPlay === true){
-        $("form#player3-hand").show();
-        runPlayer3Turn();
-      } else if (player4.turnPlay === true){
-        $("form#player4-hand").show();
-        runPlayer4Turn();
-      } else {
-        ShowWhiteCardPlayed();
-      }
-    }
-
-    var ShowWhiteCardPlayed = function(){
-      $("div#winner-pick-view").show();
-      $("div.hide").hide();
-      if (player1.turn === false){
-        $("div#card-one").show();
-        $("span#played-white-card-one").text(player1.hold);
-      }
-      if (player2.turn === false) {
-        $("div#card-two").show();
-        $("span#played-white-card-two").text(player2.hold);
-      }
-      if (player3.turn === false) {
-        $("div#card-three").show();
-        $("span#played-white-card-three").text(player3.hold);
-      }
-      if (player4.turn === false) {
-        $("div#card-four").show();
-        $("span#played-white-card-four").text(player4.hold);
       }
     }
 
