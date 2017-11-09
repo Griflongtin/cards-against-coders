@@ -297,7 +297,7 @@ $(document).ready(function() {
       } else if ( player3.turn === true) {
         player3.drawBlackHand(player3);
         $("span#black-card-content").text(player3.blackCard);
-      }else if( player4.turn === true) {
+      } else if( player4.turn === true) {
         player4.drawBlackHand(player4);
         $("span#black-card-content").text(player4.blackCard);
       }
@@ -387,6 +387,7 @@ $(document).ready(function() {
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
 
+      // Adds point to winner and scoreboard
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
         if (selectTheWinner === "1") {
           player1.points += 1;
@@ -401,29 +402,46 @@ $(document).ready(function() {
           player4.points += 1;
           $("span#player4-score").text(player4.points);
         }
+      // Check each player's total against the goal and resets black card
+      player1.checkForWin(player1);
+      player2.checkForWin(player2);
+      player3.checkForWin(player3);
+      player4.checkForWin(player4);
+      player1.reset(player1);
+      player2.reset(player2);
+      player3.reset(player3);
+      player4.reset(player4);
+      // Draws new black card for next round:
+      var drawAction = function(){
+        player1.drawHand(player1);
+        player2.drawHand(player2);
+        player3.drawHand(player3);
+        player4.drawHand(player4);
+      }
+      // Draws new black card for next round.
+  //This will need to loop:
+      drawAction();
+      if (player1.turn === true) {
+        player1.drawBlackHand(player1);
+        $("span#black-card-content").text(player1.blackCard);
+      } else if ( player2.turn === true) {
+        player2.drawBlackHand(player2);
+        $("span#black-card-content").text(player2.blackCard);
+      } else if ( player3.turn === true) {
+        player3.drawBlackHand(player3);
+        $("span#black-card-content").text(player3.blackCard);
+      }else if( player4.turn === true) {
+        player4.drawBlackHand(player4);
+        $("span#black-card-content").text(player4.blackCard);
+      }
 
-
-//     var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
-//     if (selectTheWinner === this.playerNumber)
-//     debugger;{
-//       Player(selectTheWinner).pointsToggle();
-//       console.log(Player(SelectTheWinner).points);
-//
-// }
-
-        //Things we need here on this button click:
-
-
-
-      // Pick the winner and award the point
-        // Check each player's total against the goal
-        // If game continues to next round, draw new card and start new hand
+      $("div#round-start-view").hide();
+      $("div#player-hand-view").show();
+      checkTurn();
 
     });
     // Winner Page here:
     // $("#game").hide();
     // $(".hooray").show();
-
-
   });
 });
