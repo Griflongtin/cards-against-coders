@@ -19,21 +19,21 @@ var blackTwo = new Card("Alternative medicine is now embracing the curative powe
 var blackThree = new Card("Why can't I sleep at night?");
 var blackFour = new Card("What's that sound?");
 var blackFive= new Card ("What is Batman's guilty pleasure?");
-var blackSix = new Card ("I'm sorry, Dave, but I couldn't complete my homework because of __________.");
+var blackSix = new Card ("I'm sorry Dave. But I couldn't complete my homework because of __________.");
 var blackSeven = new Card ("What's a coder's best friend?");
 var blackEight = new Card ("I get by with a little help from __________.");
 var blackNine = new Card ("__________. Betcha can't have just one!");
 var blackTen = new Card ("Programmers like __________.");
-var blackEleven = new Card ("__________. High five, bro.");
+var blackEleven = new Card ("__________. High five bro.");
 var blackTwelve = new Card ("In 1000 years, when paper money is a distant memory, how will we pay for goods and services?");
 var blackThirteen = new Card ("What are my parents hiding from me?");
 var blackFourteen = new Card ("How am I maintaining my relationship status?");
 var blackFifteen = new Card ("__________. It's a trap!");
 var blackSixteen = new Card ("The class field trip was completely ruined by __________.");
 var blackSeventeen = new Card ("What will I bring back in time to convince people that I am a powerful wizard?");
-var blackEighteen = new Card ("But before I kill you, Mr. Bond, I must show you __________.");
+var blackEighteen = new Card ("But before I kill you Mr. Bond. I must show you __________.");
 var blackNineteen = new Card ("While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on __________.");
-var blackTwenty = new Card ("Daddy, why is mommy crying?");
+var blackTwenty = new Card ("Daddy? why is mommy crying?");
 // end of black cards - Start of white Cards
 var whiteOne = new Card("Daddy issues.");
 var whiteTwo = new Card("King Kong.");
@@ -239,6 +239,10 @@ $(document).ready(function() {
     $("#player-name-two").text(player2.name);
     $("#player-name-three").text(player3.name);
     $("#player-name-four").text(player4.name);
+    $("span#player1-score").text(player1.points);
+    $("span#player2-score").text(player2.points);
+    $("span#player3-score").text(player3.points);
+    $("span#player4-score").text(player4.points);
     // hide start view, reveal black-card-draw and player-hand-view
     $("div#load").hide();
     $("#game").show();
@@ -246,19 +250,7 @@ $(document).ready(function() {
 
     $("button#button-black-card-draw").click(function() {
       drawAction();
-      if (player1.turn === true) {
-        player1.drawBlackHand(player1);
-        $("span#black-card-content").text(player1.blackCard);
-      } else if ( player2.turn === true) {
-        player2.drawBlackHand(player2);
-        $("span#black-card-content").text(player2.blackCard);
-      } else if ( player3.turn === true) {
-        player3.drawBlackHand(player3);
-        $("span#black-card-content").text(player3.blackCard);
-      }else if( player4.turn === true) {
-        player4.drawBlackHand(player4);
-        $("span#black-card-content").text(player4.blackCard);
-      }
+      drawBlackCard();
       $("div#play-turn").hide();
       $("div#black-card-draw").show();
       $("div#round-start-view").show();
@@ -274,25 +266,13 @@ $(document).ready(function() {
 
       // Adds point to winner and scoreboard
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
-        if (selectTheWinner === "1") {
-          player1.points += 1;
-          $("span#player1-score").text(player1.points);
-        } else if (selectTheWinner === "2") {
-          player2.points += 1;
-          $("span#player2-score").text(player2.points);
-        } else if (selectTheWinner === "3") {
-          player3.points += 1;
-          $("span#player3-score").text(player3.points);
-        } else if (selectTheWinner === "4") {
-          player4.points += 1;
-          $("span#player4-score").text(player4.points);
-        }
-      // Check each player's total against the goal and resets black card
-      // Draws new black card for next round:
+      selectWinner(selectTheWinner);
+      $(this).trigger('reset');
       $("div#winner-pick-view").hide();
       endGame();
       drawAction();
       checkTurn();
+      drawBlackCard();
     });
       // Winner Page here:
       // $("#game").hide();
@@ -301,6 +281,21 @@ $(document).ready(function() {
 
 
     // Start of Interface functions
+    var selectWinner = function(selectTheWinner){
+      if (selectTheWinner === "1") {
+        player1.points += 1;
+        $("span#player1-score").text(player1.points);
+      } else if (selectTheWinner === "2") {
+        player2.points += 1;
+        $("span#player2-score").text(player2.points);
+      } else if (selectTheWinner === "3") {
+        player3.points += 1;
+        $("span#player3-score").text(player3.points);
+      } else if (selectTheWinner === "4") {
+        player4.points += 1;
+        $("span#player4-score").text(player4.points);
+      }
+    }
     var endGame = function() {
       player1.checkForWin(player1);
       player2.checkForWin(player2);
@@ -501,6 +496,21 @@ $(document).ready(function() {
       if (player4.turn === false) {
         $("div#card-four").show();
         $("span#played-white-card-four").text(player4.hold);
+      }
+    }
+    var drawBlackCard = function() {
+      if (player1.turn === true) {
+        player1.drawBlackHand(player1);
+        $("span#black-card-content").text(player1.blackCard);
+      } else if ( player2.turn === true) {
+        player2.drawBlackHand(player2);
+        $("span#black-card-content").text(player2.blackCard);
+      } else if ( player3.turn === true) {
+        player3.drawBlackHand(player3);
+        $("span#black-card-content").text(player3.blackCard);
+      }else if( player4.turn === true) {
+        player4.drawBlackHand(player4);
+        $("span#black-card-content").text(player4.blackCard);
       }
     }
   });
