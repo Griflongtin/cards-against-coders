@@ -297,6 +297,10 @@ $(document).ready(function() {
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
 
+
+
+
+
       // Adds point to winner and scoreboard
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
         if (selectTheWinner === "1") {
@@ -530,5 +534,15 @@ $(document).ready(function() {
         $("span#played-white-card-four").text(player4.hold);
       }
     }
+
+    var players = [player1, player2, player3, player4];
+    players.forEach(function (player){
+      if (checkForWin.player  === true) {
+        $("#winner-name").text(player.name);
+      } else {
+        $("#losers").append(" " + player.name + ",");
+        $("#hooray").show();
+      }
+    });  
   });
 });

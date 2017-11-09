@@ -59,10 +59,6 @@ h3 {
   margin: auto;
 }
 
-.card {
-  margin-top: 20px;
-}
-
 .card-text {
   font-size: 30px;
 }
@@ -79,4 +75,18 @@ h3 {
 
 .card {
   border-radius: 10px;
+  margin-top: 20px;
 }
+
+.whitecard {
+  width: 335px;
+}
+
+.hooray {
+  font-size: 50px;
+  font-family: 'Fjalla One', sans-serif;
+
+}
+
+#SNL  {
+  width: 100%;
