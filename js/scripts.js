@@ -291,6 +291,7 @@ $(document).ready(function() {
 
     $("form#winner-pick").submit(function(event) {
       event.preventDefault();
+
       var selectTheWinner = $("input[name='player-hand-selected']:checked").val();
       selectWinner(selectTheWinner);
       $(this).trigger('reset');
@@ -597,5 +598,15 @@ $(document).ready(function() {
         $("span#black-card-content").text(player4.blackCard);
       }
     }
+
+    var players = [player1, player2, player3, player4];
+    players.forEach(function (player){
+      if (checkForWin.player  === true) {
+        $("#winner-name").text(player.name);
+      } else {
+        $("#losers").append(" " + player.name + ",");
+        $("#hooray").show();
+      }
+    });  
   });
 });
